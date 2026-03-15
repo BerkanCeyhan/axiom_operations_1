@@ -77,10 +77,10 @@ const Process = () => {
       title: "Die Architektur-Analyse",
       desc: "Wir zerlegen euer aktuelles Setup in seine Einzelteile. Wo übergeben Menschen manuell Daten? Wo brechen Asanas oder Zapiers bei Lastspitzen zusammen? Wir identifizieren exakt den Engpass, der euch vom Skalieren abhält.",
       bgElem: (
-        <svg className="absolute inset-0 w-full h-full opacity-[0.03] animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <circle cx="50" cy="50" r="40" fill="none" stroke="#E8E4DC" strokeWidth="0.5" strokeDasharray="2 4" />
-          <circle cx="50" cy="50" r="30" fill="none" stroke="#E8E4DC" strokeWidth="0.5" />
-          <circle cx="50" cy="50" r="20" fill="none" stroke="#E8E4DC" strokeWidth="1" strokeDasharray="1 6" />
+        <svg className="absolute inset-0 w-full h-full opacity-[0.08] animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
+          <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" />
+          <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="1 6" />
         </svg>
       )
     },
@@ -89,7 +89,7 @@ const Process = () => {
       title: "Maßgeschneiderte Implementierung",
       desc: "Keine Wochenlangen Workshops. Wir bauen die Resilient Ops Architektur parallel zu eurem Tagesgeschäft auf. Native API-Anbindungen, eigene kleine LLMs für eure SOPs und striktes Error-Handling. Ein echtes digitales Nervensystem.",
       bgElem: (
-        <div className="absolute inset-0 opacity-[0.03] flex flex-col justify-center">
+        <div className="absolute inset-0 opacity-[0.08] flex flex-col justify-center">
           <div className="h-px w-full bg-primary relative overflow-hidden">
              <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-accent animate-[translate_3s_linear_infinite_alternate]" />
           </div>
@@ -104,8 +104,8 @@ const Process = () => {
       title: "Die Live-Schaltung & Autonomie",
       desc: "Der Tag, an dem ihr den Schalter umlegt. Euer Inhaber-Flaschenhals wird aufgelöst. Die Systeme laufen. Das Team atmet auf. Und ihr habt plötzlich die Marge und die Kapazität, um doppelt so viele Kunden anzunehmen – ohne Stress.",
       bgElem: (
-        <svg className="absolute inset-0 w-full h-full opacity-[0.05]" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="#E8E4DC" strokeWidth="0.5" className="animate-[dash_5s_linear_infinite]" strokeDasharray="4 8" />
+        <svg className="absolute inset-0 w-full h-full opacity-[0.1]" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="0.5" className="animate-[dash_5s_linear_infinite]" strokeDasharray="4 8" />
         </svg>
       )
     }

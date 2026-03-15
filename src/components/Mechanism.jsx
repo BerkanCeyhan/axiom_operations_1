@@ -99,7 +99,7 @@ const Mechanism = () => {
         <div className="mech-viz-container relative w-full aspect-square md:aspect-[4/3] bg-surface border border-border rounded-lg overflow-hidden flex items-center justify-center p-4">
           
           {/* Subtle grid background */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#E8E4DC 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          <div className="absolute inset-0 opacity-[0.1]" style={{ backgroundImage: 'radial-gradient(var(--text-muted) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           
           {/* Flow Connector Structure */}
           <div className="relative w-full max-w-[400px] h-[300px] flex items-center justify-center z-10">
