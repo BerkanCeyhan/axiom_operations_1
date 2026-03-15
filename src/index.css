@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.dark');
+    color: theme('colors.primary');
+  }
+}
+
+@layer components {
+  /* Preset E Custom Utilities */
+  .btn-primary {
+    @apply border border-border bg-transparent text-primary relative overflow-hidden transition-all duration-500 ease-in-out hover:text-dark px-8 py-4 font-mono text-sm uppercase tracking-wider rounded-none;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-primary translate-x-[-100%] transition-transform duration-500 ease-in-out z-[-1];
+  }
+  
+  .btn-primary:hover::before {
+    @apply translate-x-0;
+  }
+
+  /* Preset E section padding scaling */
+  .section-padding {
+    @apply py-20 px-5 md:px-12 lg:py-32 lg:px-20;
+  }
+}
+
+/* Base resets */
+* {
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for a cleaner aesthetic while keeping functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.dark');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.border');
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.muted');
+}
