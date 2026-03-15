@@ -9,7 +9,7 @@
   --selection-text: #E8E4DC;
 }
 
-.theme-light {
+[data-theme='light'], .theme-light {
   --bg: #E8E4DC;
   --text-primary: #0F0F0E;
   --text-muted: #666664;

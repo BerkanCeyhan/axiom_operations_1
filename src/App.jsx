@@ -1,7 +1,16 @@
 import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-// ... rest of imports
+import MobileCTABar from './components/MobileCTABar';
+import ProblemSection from './components/ProblemSection';
+import FailedSolutions from './components/FailedSolutions';
+import Mechanism from './components/Mechanism';
+import Capabilities from './components/Capabilities';
+import SocialProof from './components/SocialProof';
+import Process from './components/Process';
+import FAQ from './components/FAQ';
+import FinalCTA from './components/FinalCTA';
+import Footer from './components/Footer';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -18,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen font-sans relative ${theme === 'light' ? 'bg-[#E8E4DC] text-[#0F0F0E]' : 'bg-[#0F0F0E] text-[#E8E4DC]'}`}>
+    <div className={`min-h-screen font-sans relative ${theme === 'light' ? 'bg-white text-dark' : 'bg-dark text-primary'}`}>
       <Navbar theme={theme} />
       <Hero theme={theme} />
       <div id="content-start">
