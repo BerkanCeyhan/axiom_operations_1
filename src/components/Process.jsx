@@ -4,51 +4,66 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Process = () => {
   const containerRef = useRef(null);
+  const wrapperRef = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      // Check if desktop (>= 768px for md breakpoint)
+      const cards = gsap.utils.toArray('.process-card');
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
       
-      if (isDesktop) {
-        const cards = gsap.utils.toArray('.process-card');
-        
-        // Pin the whole container
-        ScrollTrigger.create({
-          trigger: '.process-wrapper',
-          start: 'top top',
-          end: `+=${cards.length * 100}%`,
-          pin: true,
-          pinSpacing: true,
+      if (isDesktop && cards.length > 0) {
+        // Pinning strategy: Pin the cards-container while the main wrapper scrolls
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: `+=${cards.length * 100}%`,
+            pin: true,
+            scrub: true,
+            // pinSpacing: true is default
+          }
         });
 
         cards.forEach((card, i) => {
-          if (i === cards.length - 1) return; // Skip last card
+          if (i === 0) {
+            // First card starts visible, no entrance animation needed in the timeline
+            // But we might want to fade it out as next one comes
+          }
+          
+          if (i > 0) {
+            // Animate card entrance
+            tl.fromTo(card, 
+              { yPercent: 100, opacity: 0 },
+              { yPercent: 0, opacity: 1, duration: 1, ease: 'none' },
+              i - 0.5 // Start overlap
+            );
+          }
 
-          gsap.to(card, {
-            scale: 0.9,
-            opacity: 0.3,
-            filter: 'blur(10px)',
-            ease: "none",
-            scrollTrigger: {
-              trigger: '.process-wrapper',
-              start: () => `top -${i * 100}%`,
-              end: () => `top -${(i + 1) * 100}%`,
-              scrub: true,
-            }
-          });
+          // Subtle parallax/scale-back for previous cards
+          if (i < cards.length - 1) {
+            tl.to(card, {
+              scale: 0.9,
+              opacity: 0.4,
+              filter: 'blur(8px)',
+              yPercent: -10,
+              duration: 1,
+              ease: 'none'
+            }, i + 0.5);
+          }
         });
       } else {
-        // Mobile simple fade up
-        gsap.from('.process-card', {
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: '.process-wrapper',
-            start: 'top 80%'
-          }
+        // Mobile simple scroll-triggered fade-ups
+        cards.forEach((card) => {
+          gsap.from(card, {
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none reverse"
+            }
+          });
         });
       }
     }, containerRef);
@@ -97,37 +112,46 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" ref={containerRef} className="bg-dark relative">
-      <div className="process-wrapper md:h-[100vh] relative max-w-7xl mx-auto md:w-full">
-        <div className="md:absolute md:inset-x-0 md:top-1/2 md:-translate-y-1/2 flex flex-col gap-8 md:block p-5 md:p-12 lg:p-20">
+    <section id="process" ref={containerRef} className="bg-dark relative overflow-hidden">
+      {/* 
+          Main scrolling space is defined by the container height (via GSAP end: +=X00%).
+          The viewport content is pinned.
+      */}
+      <div className="relative min-h-screen flex flex-col items-center justify-center section-padding md:p-0">
+        <div className="max-w-7xl mx-auto w-full relative h-[70vh] md:h-[60vh]">
           
-          <div className="mb-12 md:hidden">
-            <h2 className="font-sans font-light text-primary text-3xl">Der Implementierungs-Pfad</h2>
+          <div className="mb-12 md:absolute md:-top-24 md:left-0 z-20">
+            <h2 className="font-sans font-light text-primary text-3xl md:text-5xl tracking-tight">Der Implementierungs-Pfad</h2>
           </div>
 
-          {steps.map((step, i) => (
-            <div 
-              key={i} 
-              className="process-card md:absolute md:inset-0 md:h-[60vh] md:mt-[20vh] w-full bg-surface border border-border backdrop-blur-md rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl z-10"
-              style={{ zIndex: steps.length - i }}
-            >
-              {step.bgElem}
-              <div className="relative z-10 p-10 md:p-16 flex flex-col justify-center w-full h-full">
-                <div className="font-mono text-[8rem] md:text-[12rem] text-muted/5 font-medium leading-none absolute right-4 top-4 md:right-12 md:top-1/2 md:-translate-y-1/2 select-none pointer-events-none">
-                  {step.num}
-                </div>
-                <div className="max-w-2xl relative">
-                  <span className="font-mono text-xs tracking-widest text-accent uppercase mb-4 block">Phase {step.num}</span>
-                  <h3 className="font-sans font-light text-primary text-[clamp(2rem,4vw,3.5rem)] mb-6 tracking-[-0.04em]">
-                    {step.title}
-                  </h3>
-                  <p className="font-sans text-muted text-lg md:text-xl leading-[1.7]">
-                    {step.desc}
-                  </p>
+          <div className="relative w-full h-full">
+            {steps.map((step, i) => (
+              <div 
+                key={i} 
+                className="process-card md:absolute inset-0 w-full h-full bg-surface border border-border backdrop-blur-md rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl transition-shadow will-change-transform mb-8 md:mb-0"
+                style={{ 
+                  zIndex: i + 1,
+                  // Mobile starts relative and stacked, Desktop starts absolute inside the pinned container
+                }}
+              >
+                {step.bgElem}
+                <div className="relative z-10 p-8 md:p-16 flex flex-col justify-center w-full h-full">
+                  <div className="font-mono text-[6rem] md:text-[12rem] text-muted/5 font-medium leading-none absolute right-4 top-4 md:right-12 md:top-1/2 md:-translate-y-1/2 select-none pointer-events-none">
+                    {step.num}
+                  </div>
+                  <div className="max-w-2xl relative">
+                    <span className="font-mono text-xs tracking-widest text-accent uppercase mb-4 block">Phase {step.num}</span>
+                    <h3 className="font-sans font-light text-primary text-[clamp(1.75rem,4vw,3.5rem)] mb-6 tracking-[-0.04em] leading-tight">
+                      {step.title}
+                    </h3>
+                    <p className="font-sans text-muted text-base md:text-xl leading-[1.7]">
+                      {step.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
