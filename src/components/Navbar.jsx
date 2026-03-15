@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ theme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const isLight = theme === 'light';
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -14,15 +15,15 @@ const Navbar = () => {
 
   return (
     <header 
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 max-w-4xl w-[calc(100%-3rem)] md:w-max rounded-full ${
-        isScrolled ? 'bg-dark/80 backdrop-blur-xl border border-border py-3 px-6' : 'bg-transparent py-4 px-6'
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 max-w-4xl w-[calc(100%-3rem)] md:w-max rounded-full border border-border ${
+        isScrolled 
+          ? 'bg-dark/80 backdrop-blur-xl py-3 px-6 shadow-lg shadow-black/10' 
+          : 'bg-dark/40 backdrop-blur-md py-4 px-6'
       }`}
     >
       <div className="flex items-center justify-between md:justify-center md:gap-12">
         <a href="#" className="flex items-center gap-2 group">
-          <span className={`font-mono text-sm tracking-widest font-medium uppercase transition-colors ${
-            isScrolled ? 'text-primary' : 'text-primary/90 group-hover:text-primary'
-          }`}>
+          <span className="font-mono text-sm tracking-widest font-medium uppercase text-primary transition-colors">
             Axiom
           </span>
         </a>
@@ -35,7 +36,7 @@ const Navbar = () => {
 
         <a 
           href="#audit" 
-          className="hidden md:inline-flex items-center justify-center border border-border bg-transparent text-primary hover:bg-primary hover:text-dark transition-all duration-300 px-6 py-2.5 font-mono text-xs uppercase tracking-widest rounded-none"
+          className="hidden md:inline-flex items-center justify-center border border-accent bg-transparent text-primary hover:bg-accent hover:text-primary transition-all duration-300 px-6 py-2.5 font-mono text-xs uppercase tracking-widest rounded-none"
         >
           Audit anfragen
         </a>

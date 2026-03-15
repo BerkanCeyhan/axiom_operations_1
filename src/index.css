@@ -1,11 +1,39 @@
+:root {
+  --bg: #0F0F0E;
+  --text-primary: #E8E4DC;
+  --text-muted: #C8C3B8;
+  --accent: #3B4F3A;
+  --border: #1A1A18;
+  --surface: rgba(232, 228, 220, 0.06);
+  --selection-bg: #3B4F3A;
+  --selection-text: #E8E4DC;
+}
+
+.theme-light {
+  --bg: #E8E4DC;
+  --text-primary: #0F0F0E;
+  --text-muted: #666664;
+  --accent: #3B4F3A;
+  --border: rgba(15, 15, 14, 0.1);
+  --surface: rgba(15, 15, 14, 0.05);
+  --selection-bg: #0F0F0E;
+  --selection-text: #E8E4DC;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html, body {
-    background-color: theme('colors.dark');
-    color: theme('colors.primary');
+  html {
+    @apply scroll-smooth;
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+  
+  body {
+    @apply bg-transparent text-inherit font-sans selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)];
+    line-height: 1.8;
     overflow-x: hidden;
     width: 100%;
   }

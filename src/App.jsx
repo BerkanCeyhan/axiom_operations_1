@@ -1,21 +1,26 @@
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MobileCTABar from './components/MobileCTABar';
-import ProblemSection from './components/ProblemSection';
-import FailedSolutions from './components/FailedSolutions';
-import Mechanism from './components/Mechanism';
-import Capabilities from './components/Capabilities';
-import SocialProof from './components/SocialProof';
-import Process from './components/Process';
-import FAQ from './components/FAQ';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+// ... rest of imports
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('v') === 'L') {
+      setTheme('light');
+      document.documentElement.classList.add('theme-light');
+    } else {
+      setTheme('dark');
+      document.documentElement.classList.remove('theme-light');
+    }
+  }, []);
+
   return (
-    <div className="bg-dark min-h-screen text-primary font-sans relative">
-      <Navbar />
-      <Hero />
+    <div className={`min-h-screen font-sans relative ${theme === 'light' ? 'bg-[#E8E4DC] text-[#0F0F0E]' : 'bg-[#0F0F0E] text-[#E8E4DC]'}`}>
+      <Navbar theme={theme} />
+      <Hero theme={theme} />
       <div id="content-start">
         <ProblemSection />
         <FailedSolutions />
@@ -25,7 +30,7 @@ function App() {
         <Process />
         <FAQ />
         <FinalCTA />
-        <Footer />
+        <Footer theme={theme} />
       </div>
       <MobileCTABar />
     </div>

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ShaderCanvas from './ShaderCanvas';
 
-const Hero = () => {
+const Hero = ({ theme }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Hero = () => {
       className="relative min-h-[100dvh] w-full flex items-end pb-20 md:pb-32 px-5 md:px-12 lg:px-20 overflow-hidden bg-dark"
     >
       {/* WebGL Shader Background */}
-      <ShaderCanvas />
+      <ShaderCanvas theme={theme} />
       
       {/* Heavy gradient overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent pointer-events-none" />

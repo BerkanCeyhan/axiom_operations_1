@@ -43,11 +43,11 @@ const fragmentShaderSource = `
     float wave = (w1 + w2) * 0.5 + w3;
     wave = wave * 0.5 + 0.5; 
     
-    // Adapted Tectonic Biophilia Colors
-    vec3 colorVoid = vec3(0.06, 0.06, 0.05);      // #0F0F0E
-    vec3 colorIron = vec3(0.10, 0.10, 0.09);      // #1A1A18
+    // Theme Colors
+    vec3 colorVoid = ${isLight ? 'vec3(0.91, 0.89, 0.86)' : 'vec3(0.06, 0.06, 0.05)'};      // #E8E4DC or #0F0F0E
+    vec3 colorIron = ${isLight ? 'vec3(0.78, 0.76, 0.72)' : 'vec3(0.10, 0.10, 0.09)'};      // #C8C3B8 or #1A1A18
     vec3 colorMoss = vec3(0.23, 0.31, 0.23);      // #3B4F3A
-    vec3 colorConcrete = vec3(0.91, 0.89, 0.86);  // #E8E4DC
+    vec3 colorConcrete = ${isLight ? 'vec3(0.06, 0.06, 0.05)' : 'vec3(0.91, 0.89, 0.86)'};  // #0F0F0E or #E8E4DC
     
     // Mix background colors (Void to Moss to Concrete highlights)
     vec3 bgColor = mix(colorVoid, colorIron, smoothstep(0.0, 0.4, wave));

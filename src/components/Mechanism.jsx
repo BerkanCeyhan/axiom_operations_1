@@ -52,10 +52,25 @@ const Mechanism = () => {
 
   return (
     <section id="mechanism" ref={containerRef} className="section-padding bg-dark border-t border-border relative overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      {/* Botanical Structural Element: High-contrast specimen nature in low light - Increased Visibility */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.20] pointer-events-none grayscale mix-blend-screen"
+        style={{ 
+          backgroundImage: 'url("https://images.unsplash.com/photo-1546559336-0c9f16da0890?auto=format&fit=crop&w=1920&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+
+      {/* Clinical Stillness: Vertical shimmer line */}
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-accent/20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-[30%] bg-gradient-to-b from-transparent via-accent to-transparent animate-[shimmer_6s_linear_infinite]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
         
         {/* Text Side */}
-        <div className="z-10">
+        <div className="z-10 text-primary">
           <div className="mb-8">
             <h2 className="mech-text flex flex-col gap-2">
               <span className="font-sans font-light text-muted uppercase tracking-[0.05em] text-sm md:text-base">

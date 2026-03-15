@@ -1,20 +1,30 @@
-const Footer = () => {
+const Footer = ({ theme }) => {
+  const isLight = theme === 'light';
   return (
-    <footer className="bg-[#0A0A09] pt-20 pb-12 px-6 md:px-12 border-t border-border relative z-20">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-dark pt-20 pb-12 px-6 md:px-12 border-t border-border relative overflow-hidden z-20">
+      {/* Botanical strip: macro nature sign of life */}
+      <div 
+        className={`absolute inset-0 z-0 pointer-events-none grayscale ${isLight ? 'opacity-[0.08]' : 'opacity-[0.05]'}`}
+        style={{ 
+          backgroundImage: 'url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'bottom'
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
           
           {/* Brand Info */}
           <div className="md:col-span-5">
-            <div className="font-mono text-sm tracking-widest text-primary uppercase mb-4 opacity-90">
+            <div className="font-mono text-sm tracking-[0.2em] text-primary uppercase mb-4 opacity-90">
               Axiom
             </div>
-            <p className="font-sans text-muted text-sm leading-[1.7] max-w-sm mb-8">
-              Architekten für ausfallsichere KI-Infrastruktur und maßgeschneiderte Unternehmensprozesse für Agenturen und B2B-Dienstleister.
+            <p className="font-sans text-muted text-sm leading-[1.8] max-w-sm mb-8">
+              Architekten für ausfallsichere KI-Infrastruktur und maßgeschneiderte Unternehmensprozesse.
             </p>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-[#4CAF50] rounded-full animate-pulse blur-[1px]" />
-              <span className="w-1.5 h-1.5 bg-[#4CAF50] rounded-full animate-pulse absolute" />
+              <span className={`w-1.5 h-1.5 rounded-full animate-pulse transition-shadow ${isLight ? 'bg-accent shadow-[0_0_8px_rgba(59,79,58,0.8)]' : 'bg-accent shadow-[0_0_8px_rgba(59,79,58,0.5)]'}`} />
               <span className="font-mono text-[10px] text-muted uppercase tracking-widest pl-1">System Operational</span>
             </div>
           </div>
