@@ -27,21 +27,21 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen font-sans relative ${theme === 'light' ? 'bg-white text-dark' : 'bg-dark text-primary'}`}>
+    <div className="min-h-screen font-sans relative">
       <Navbar theme={theme} />
       <Hero theme={theme} />
       <div id="content-start">
-        <ProblemSection />
-        <FailedSolutions />
-        <Mechanism />
-        <Capabilities />
-        <SocialProof />
-        <Process />
-        <FAQ />
-        <FinalCTA />
+        <ProblemSection theme={theme} />
+        <FailedSolutions theme={theme} />
+        <Mechanism theme={theme} />
+        <Capabilities theme={theme} />
+        <SocialProof theme={theme} />
+        <Process theme={theme} />
+        <FAQ theme={theme} />
+        <FinalCTA theme={theme} />
         <Footer theme={theme} />
       </div>
-      <MobileCTABar />
+      <MobileCTABar theme={theme} />
     </div>
   );
 }
