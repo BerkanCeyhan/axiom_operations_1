@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  body {
+  html, body {
     background-color: theme('colors.dark');
     color: theme('colors.primary');
+    overflow-x: hidden;
+    width: 100%;
   }
 }
 

@@ -118,17 +118,17 @@ const Process = () => {
           The viewport content is pinned.
       */}
       <div className="relative min-h-screen flex flex-col items-center justify-center section-padding md:p-0">
-        <div className="max-w-7xl mx-auto w-full relative h-[70vh] md:h-[60vh]">
+        <div className="max-w-7xl mx-auto w-full relative h-auto md:h-[60vh]">
           
           <div className="mb-12 md:absolute md:-top-24 md:left-0 z-20">
             <h2 className="font-sans font-light text-primary text-3xl md:text-5xl tracking-tight">Der Implementierungs-Pfad</h2>
           </div>
 
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-auto md:h-full">
             {steps.map((step, i) => (
               <div 
                 key={i} 
-                className="process-card md:absolute inset-0 w-full h-full bg-surface border border-border backdrop-blur-md rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl transition-shadow will-change-transform mb-8 md:mb-0"
+                className="process-card md:absolute inset-0 w-full h-auto md:h-full bg-surface border border-border backdrop-blur-md rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl transition-shadow will-change-transform mb-8 md:mb-0"
                 style={{ 
                   zIndex: i + 1,
                   // Mobile starts relative and stacked, Desktop starts absolute inside the pinned container
