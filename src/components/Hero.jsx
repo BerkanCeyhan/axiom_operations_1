@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import ShaderCanvas from './ShaderCanvas';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -23,18 +24,13 @@ const Hero = () => {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-[100dvh] w-full flex items-end pb-20 md:pb-32 px-5 md:px-12 lg:px-20 overflow-hidden"
+      className="relative min-h-[100dvh] w-full flex items-end pb-20 md:pb-32 px-5 md:px-12 lg:px-20 overflow-hidden bg-dark"
     >
-      {/* Background Image: Board-formed concrete with forest/plant reflection or minimal brutalist interior */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1541888034035-77983679d6b2?auto=format&fit=crop&w=1920&q=80")' 
-        }}
-      />
+      {/* WebGL Shader Background */}
+      <ShaderCanvas />
       
       {/* Heavy gradient overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-t from-dark/95 via-dark/60 to-transparent" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent pointer-events-none" />
       
       {/* Content wrapper anchored to bottom-left */}
       <div className="relative z-10 w-full max-w-5xl">
