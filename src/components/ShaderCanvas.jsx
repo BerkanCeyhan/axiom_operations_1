@@ -7,7 +7,21 @@ const vertexShaderSource = `
   }
 `;
 
-const fragmentShaderSource = `
+const ShaderCanvas = ({ theme }) => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const isLight = theme === 'light';
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const gl = canvas.getContext('webgl');
+    if (!gl) {
+      console.error('WebGL not supported');
+      return;
+    }
+
+    const fragmentShaderSource = `
   precision highp float;
   uniform vec2 u_resolution;
   uniform float u_time;
@@ -83,19 +97,6 @@ const fragmentShaderSource = `
     gl_FragColor = vec4(finalColor, 1.0);
   }
 `;
-
-const ShaderCanvas = () => {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const gl = canvas.getContext('webgl');
-    if (!gl) {
-      console.error('WebGL not supported');
-      return;
-    }
 
     const compileShader = (type, source) => {
       const shader = gl.createShader(type);
@@ -173,11 +174,9 @@ const ShaderCanvas = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
       gl.deleteProgram(program);
-      gl.deleteShader(vertexShader);
-      gl.deleteShader(fragmentShader);
       gl.deleteBuffer(positionBuffer);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas
