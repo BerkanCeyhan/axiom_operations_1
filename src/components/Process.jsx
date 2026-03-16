@@ -10,7 +10,7 @@ const Process = () => {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray('.process-card');
       const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-      
+
       if (isDesktop && cards.length > 0) {
         // Pinning strategy: Pin the cards-container while the main wrapper scrolls
         const tl = gsap.timeline({
@@ -29,10 +29,10 @@ const Process = () => {
             // First card starts visible, no entrance animation needed in the timeline
             // But we might want to fade it out as next one comes
           }
-          
+
           if (i > 0) {
             // Animate card entrance
-            tl.fromTo(card, 
+            tl.fromTo(card,
               { yPercent: 100, opacity: 0 },
               { yPercent: 0, opacity: 1, duration: 1, ease: 'none' },
               i - 0.5 // Start overlap
@@ -74,7 +74,7 @@ const Process = () => {
   const steps = [
     {
       num: "01",
-      title: "Phase 01: Analyse. Wo verliert ihr Zeit und Geld?",
+      title: "Analyse. Wo verliert ihr Zeit und Geld?",
       desc: "Wir zerlegen euer aktuelles Setup in seine Einzelteile. Wo werden Daten manuell übergeben? Wo brechen Prozesse bei steigender Kundenzahl zusammen? Wir finden die Engpässe, die euch vom Skalieren abhalten.",
       bgElem: (
         <svg className="absolute inset-0 w-full h-full opacity-[0.08] animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -86,22 +86,22 @@ const Process = () => {
     },
     {
       num: "02",
-      title: "Phase 02: Implementierung. Parallel zum Tagesgeschäft.",
+      title: "Implementierung. Parallel zum Tagesgeschäft.",
       desc: "Keine wochenlangen Workshops. Wir bauen eure KI-Agenten und Automationen auf, während euer Tagesgeschäft normal weiterläuft. Eure Tools werden sauber verbunden, Prozesse automatisiert, das Team Schritt für Schritt eingebunden.",
       bgElem: (
         <div className="absolute inset-0 opacity-[0.08] flex flex-col justify-center">
           <div className="h-px w-full bg-primary relative overflow-hidden">
-             <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-accent animate-[translate_3s_linear_infinite_alternate]" />
+            <div className="absolute left-0 top-0 bottom-0 w-1/3 bg-accent animate-[translate_3s_linear_infinite_alternate]" />
           </div>
           <div className="h-px w-full bg-primary mt-8 relative overflow-hidden">
-             <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-accent animate-[translate_4s_linear_infinite_alternate_reverse]" />
+            <div className="absolute right-0 top-0 bottom-0 w-1/4 bg-accent animate-[translate_4s_linear_infinite_alternate_reverse]" />
           </div>
         </div>
       )
     },
     {
       num: "03",
-      title: "Phase 03: Live-Schaltung. Das System übernimmt.",
+      title: "Live-Schaltung. Das System übernimmt.",
       desc: "Der Tag, an dem ihr den Schalter umlegt. Die Systeme laufen. Das Team atmet auf. Und ihr habt die Marge und die Kapazität, deutlich mehr Kunden anzunehmen, ohne zusätzliches Personal und ohne Stress.",
       bgElem: (
         <svg className="absolute inset-0 w-full h-full opacity-[0.1]" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -119,17 +119,17 @@ const Process = () => {
       */}
       <div className="relative min-h-screen flex flex-col items-center justify-center section-padding md:p-0">
         <div className="max-w-7xl mx-auto w-full relative h-auto md:h-[60vh]">
-          
+
           <div className="mb-12 md:absolute md:-top-24 md:left-0 z-20">
             <h2 className="font-sans font-light text-primary text-3xl md:text-5xl tracking-tight">Der Implementierungs-Pfad</h2>
           </div>
 
           <div className="relative w-full h-auto md:h-full">
             {steps.map((step, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="process-card md:absolute inset-0 w-full h-auto md:h-full bg-surface border border-border backdrop-blur-md rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl transition-shadow will-change-transform mb-8 md:mb-0"
-                style={{ 
+                style={{
                   zIndex: i + 1,
                   // Mobile starts relative and stacked, Desktop starts absolute inside the pinned container
                 }}
