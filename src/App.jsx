@@ -17,6 +17,9 @@ const Impressum = lazy(() => import('./pages/Impressum'));
 const Datenschutz = lazy(() => import('./pages/Datenschutz'));
 const Audit = lazy(() => import('./pages/Audit'));
 
+// Simple loading skeleton to prevent layout shift
+const SectionPlaceholder = () => <div className="min-h-[50vh] bg-dark" />;
+
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Home component to wrap the landing page sections
