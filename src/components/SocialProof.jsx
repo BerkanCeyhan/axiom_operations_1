@@ -38,7 +38,7 @@ const SocialProof = () => {
 
   const metrics = [
     { value: "40+", label: "Agenturen & Dienstleister betreut" },
-    { value: "15h+", label: "Zeitersparnis pro Mitarbeiter / Woche" },
+    { value: "15h+", label: "Zeitersparnis pro Mitarbeiter und Woche" },
     { value: "100%", label: "Systemverfügbarkeit im laufenden Betrieb", highlight: true }
   ];
 
@@ -46,7 +46,7 @@ const SocialProof = () => {
     {
       name: "[Name des Kunden]",
       role: "Inhaber einer 80k MRR Performance-Agentur",
-      quote: "Jede Freigabe, jedes Onboarding lief über meinen Schreibtisch. Seit der Implementierung läuft das System autark. Wir haben 4 neue Retainer geclosed — ohne dass sich die operative Last erhöht hat."
+      quote: "Jede Freigabe, jedes Onboarding lief über meinen Schreibtisch. Seit der Implementierung läuft das System ohne mich. Wir haben diesen Monat 4 neue Retainer geclosed und die operative Last hat sich nicht erhöht."
     },
     {
       name: "[Name des Kunden]",
@@ -56,7 +56,7 @@ const SocialProof = () => {
     {
       name: "[Name des Kunden]",
       role: "Inhaber B2B-Consulting",
-      quote: "Ich dachte, wir brauchen mehr Leute für den nächsten Wachstumsschritt. Die Wahrheit war: Wir brauchten bessere Systeme. Die Personalkosten sind eingefroren, der Umsatz um 30% gestiegen."
+      quote: "Ich dachte, wir brauchen mehr Personal für den nächsten Wachstumsschritt. Die Wahrheit: Wir brauchten bessere Systeme. Die Personalkosten sind eingefroren, der Umsatz um 30% gestiegen."
     }
   ];
 
@@ -65,10 +65,10 @@ const SocialProof = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
           <h2 className="font-sans font-light text-[clamp(2.5rem,5vw,3.5rem)] leading-tight tracking-[-0.04em] mb-4 text-[#0F0F0E]">
-            Was sich nach der Implementierung ändert.
+            Was sich nach der Implementierung verändert.
           </h2>
           <p className="font-sans text-[#0F0F0E]/70 text-lg max-w-2xl mx-auto">
-            Gute Konzepte klingen auf Papier immer gut. Was zählt, ist die messbare Veränderung in deinem Alltag.
+            Gute Konzepte klingen auf dem Papier immer gut. Was zählt, ist das, was sich in deinem Alltag tatsächlich verändert.
           </p>
         </div>
 

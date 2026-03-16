@@ -48,7 +48,7 @@ const FailedSolutions = () => {
             </svg>
             <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Mehr Mitarbeiter einstellen</h3>
             <p className="font-sans text-muted/80 leading-[1.7] relative z-20">
-              Jeder neue Kopf bringt nicht nur Arbeitskraft, sondern auch Kommunikations-Overhead und Einarbeitungszeit. Die Fixkosten steigen, die Marge schmilzt — und du tauschst ein Fulfillment-Problem gegen ein Management-Problem.
+              Jeder neue Kopf bringt nicht nur Arbeitskraft, sondern auch Kommunikations-Overhead und Einarbeitungszeit. Die Fixkosten steigen, die Marge schmilzt. Am Ende tauscht du ein Fulfillment-Problem gegen ein Management-Problem.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ const FailedSolutions = () => {
             </svg>
             <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Noch ein Tool oder eine Automatisierung</h3>
             <p className="font-sans text-muted/80 leading-[1.7] relative z-20">
-              Tools und Automationen sind nur so gut wie die Strategie dahinter. Ein Zap hier, ein Make-Szenario da — ohne einen durchdachten Gesamtprozess entsteht nur ein neues Flickwerk, das beim nächsten Sonderfall auseinanderfällt.
+              Tools und Automationen sind nur so gut wie die Strategie dahinter. Ein Zap hier, ein Make-Szenario da, aber ohne durchdachten Gesamtprozess entsteht einfach nur ein neues Flickwerk, das beim nächsten Sonderfall auseinanderfällt.
             </p>
           </div>
 
@@ -68,14 +68,14 @@ const FailedSolutions = () => {
             </svg>
             <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Freelancer zur Entlastung</h3>
             <p className="font-sans text-muted/80 leading-[1.7] relative z-20">
-              Sie lindern den Schmerz kurzfristig, aber wenn sie das Projekt verlassen, geht das Wissen mit. Du stest wieder am Anfang — und das System bleibt genauso fragil wie vorher.
+              Kurzfristig hilft es. Aber wenn der Freelancer das Projekt verlässt, geht das Wissen mit. Du stehst wieder am Anfang und das System bleibt genauso fragil wie vorher.
             </p>
           </div>
         </div>
 
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-sans font-light text-primary/90 text-lg md:text-xl leading-[1.6]">
-            Wenn mehr Mitarbeiter, Tools oder Freelancer die Antwort wären, hätten sie bei dir schon längst funktioniert. Du hast diese Wege bereits ausprobiert — und das operative Chaos ist geblieben.
+            Wenn mehr Mitarbeiter, Tools oder Freelancer die Antwort wären, hätten sie bei dir schon längst funktioniert. Du hast diese Wege ausprobiert. Das operative Chaos ist geblieben.
             <span className="block mt-4 text-accent">Es liegt nicht an den einzelnen Tools. Es liegt daran, wie sie zusammenspielen.</span>
           </p>
         </div>

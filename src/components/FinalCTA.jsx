@@ -44,7 +44,7 @@ const FinalCTA = ({ theme }) => {
             Die Wachstumsfalle durchbrechen.
           </span>
           <span className="font-drama italic text-muted text-2xl md:text-3xl leading-[1.1]">
-            Schluss mit operativem Chaos.
+            Das Ende des operativen Chaos.
           </span>
         </h2>
 

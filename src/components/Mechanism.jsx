@@ -90,7 +90,7 @@ const Mechanism = () => {
               Wir bauen keine einzelnen Automationen. Wir verbinden KI-Agenten, Automationen und klare Prozesse zu einem zusammenhängenden System, das dein Fulfillment zu 90% ohne menschlichen Eingriff abwickelt.
             </p>
             <p className="mech-text font-sans text-muted leading-[1.7] text-lg">
-              Das bedeutet: Aufgaben werden automatisch zugewiesen, Wissen ist zentral abrufbar und Fehler werden abgefangen, bevor dein Kunde überhaupt etwas davon mitbekommt. <strong className="font-normal text-primary">Mehr Kunden, gleiche Teamgröße, steigende Marge.</strong>
+              Aufgaben werden automatisch zugewiesen. Wissen ist zentral abrufbar. Fehler werden abgefangen, bevor dein Kunde etwas davon mitbekommt. <strong className="font-normal text-primary">Mehr Kunden, gleiche Teamgröße, steigende Marge.</strong>
             </p>
           </div>
         </div>

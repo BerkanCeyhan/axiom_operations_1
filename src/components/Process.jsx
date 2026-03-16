@@ -74,8 +74,8 @@ const Process = () => {
   const steps = [
     {
       num: "01",
-      title: "Phase 01: Analyse — Wo verliert ihr Zeit und Geld?",
-      desc: "Wir zerlegen euer aktuelles Setup in seine Einzelteile. Wo werden Daten manuell übergeben? Wo brechen Prozesse bei steigender Kundenzahl zusammen? Wir identifizieren exakt die Engpässe, die euch vom Skalieren abhalten.",
+      title: "Phase 01: Analyse. Wo verliert ihr Zeit und Geld?",
+      desc: "Wir zerlegen euer aktuelles Setup in seine Einzelteile. Wo werden Daten manuell übergeben? Wo brechen Prozesse bei steigender Kundenzahl zusammen? Wir finden die Engpässe, die euch vom Skalieren abhalten.",
       bgElem: (
         <svg className="absolute inset-0 w-full h-full opacity-[0.08] animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100" preserveAspectRatio="none">
           <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
@@ -86,8 +86,8 @@ const Process = () => {
     },
     {
       num: "02",
-      title: "Phase 02: Implementierung — Parallel zum Tagesgeschäft",
-      desc: "Keine wochenlangen Workshops. Wir bauen eure KI-Agenten und Automationen parallel zum laufenden Betrieb auf. Eure Tools werden sauber verbunden, Prozesse automatisiert und euer Team Schritt für Schritt eingebunden.",
+      title: "Phase 02: Implementierung. Parallel zum Tagesgeschäft.",
+      desc: "Keine wochenlangen Workshops. Wir bauen eure KI-Agenten und Automationen auf, während euer Tagesgeschäft normal weiterläuft. Eure Tools werden sauber verbunden, Prozesse automatisiert, das Team Schritt für Schritt eingebunden.",
       bgElem: (
         <div className="absolute inset-0 opacity-[0.08] flex flex-col justify-center">
           <div className="h-px w-full bg-primary relative overflow-hidden">
@@ -101,8 +101,8 @@ const Process = () => {
     },
     {
       num: "03",
-      title: "Phase 03: Live-Schaltung — Das System übernimmt",
-      desc: "Der Tag, an dem ihr den Schalter umlegt. Die Systeme laufen. Das Team atmet auf. Und ihr habt plötzlich die Marge und die Kapazität, deutlich mehr Kunden anzunehmen — ohne zusätzliches Personal und ohne Stress.",
+      title: "Phase 03: Live-Schaltung. Das System übernimmt.",
+      desc: "Der Tag, an dem ihr den Schalter umlegt. Die Systeme laufen. Das Team atmet auf. Und ihr habt die Marge und die Kapazität, deutlich mehr Kunden anzunehmen, ohne zusätzliches Personal und ohne Stress.",
       bgElem: (
         <svg className="absolute inset-0 w-full h-full opacity-[0.1]" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="M0,50 Q25,20 50,50 T100,50" fill="none" stroke="currentColor" strokeWidth="0.5" className="animate-[dash_5s_linear_infinite]" strokeDasharray="4 8" />

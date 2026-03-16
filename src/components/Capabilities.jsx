@@ -42,7 +42,7 @@ const AgentGrid = ({ theme }) => {
 // --- Pattern 2: Command Line ---
 const CommandLineInfo = ({ theme }) => {
   const [text, setText] = useState('');
-  const fullText = `> Frage: "Wie läuft das Onboarding für Agenturkunden?"\n> Durchsuche 142 Dokumente...\n✓ Antwort gefunden (Vertrauen 98%)\n\n"Der Kickoff-Prozess benötigt das ausgefüllte Intake-Formular. Letzte Änderung durch Sarah am 14.02."`;
+  const fullText = `> Frage: "Wie läuft das Onboarding für Agenturkunden?"\n> Durchsuche 142 Dokumente...\n✓ Antwort gefunden\n\n"Der Kickoff-Prozess benötigt das ausgefüllte Intake-Formular. Letzte Änderung durch Sarah am 14.02."`;
   
   useEffect(() => {
     let current = '';
@@ -117,9 +117,9 @@ const DiagnosticShuffler = () => {
   }, []);
 
   const items = [
-    { title: 'Signal erkannt: Series-B-Finanzierung', desc: 'TechCrunch-Artikel vor 12 Min. entdeckt.' },
-    { title: 'Kaufsignal: Wettbewerber verloren', desc: 'Stellenanzeige für Inhouse-SEO gelöscht.' },
-    { title: 'Aktion: Sales-Briefing erstellt', desc: 'Personalisierter Gesprächswinkel für den Call generiert.' }
+    { title: 'Signal erkannt: Series-B-Finanzierung.', desc: 'TechCrunch-Artikel vor 12 Min. entdeckt.' },
+    { title: 'Kaufsignal: Wettbewerber verloren.', desc: 'Stellenanzeige für Inhouse-SEO gelöscht.' },
+    { title: 'Aktion: Sales-Briefing erstellt.', desc: 'Personalisierter Gesprächswinkel für den Call generiert.' }
   ];
 
   return (
@@ -189,25 +189,25 @@ const Capabilities = ({ theme }) => {
   const capabilities = [
     {
       title: "Automatisches Kunden-Onboarding",
-      desc: "Neuer Deal abgeschlossen? Das System erstellt automatisch das Projekt-Board, weist Aufgaben ans Team zu und triggert die Willkommensmail — in Sekunden, ohne dass du eingreifen musst.",
+      desc: "Neuer Deal abgeschlossen? Das System erstellt das Projekt-Board, weist Aufgaben ans Team zu und schickt die Willkommensmail raus. In Sekunden, ohne dass du eingreifen musst.",
       icon: GitMerge,
       interactive: <AgentGrid theme={theme} />
     },
     {
       title: "KI-Wissensdatenbank für dein Team",
-      desc: "Dein Team fragt die KI statt dich. SOPs, Prozesse, Kundendaten — alles zentral abrufbar. Neue Mitarbeiter sind in Tagen eingearbeitet statt in Wochen.",
+      desc: "Dein Team fragt die KI statt dich. SOPs, Prozesse, Kundendaten, alles zentral abrufbar. Neue Mitarbeiter sind in Tagen eingearbeitet statt in Wochen.",
       icon: Database,
       interactive: <CommandLineInfo theme={theme} />
     },
     {
       title: "Automatische Lead-Recherche & Scoring",
-      desc: "Vor jedem Sales-Call zieht die KI alle relevanten Infos und Kaufsignale des Leads und fasst sie in einem Sales-Briefing zusammen. Dein Vertriebler geht vorbereitet ins Gespräch — ohne manuelle Recherche.",
+      desc: "Vor jedem Sales-Call zieht die KI alle relevanten Infos und Kaufsignale zum Lead und fasst sie in einem Sales-Briefing zusammen. Dein Vertriebler geht vorbereitet ins Gespräch, ohne selbst recherchieren zu müssen.",
       icon: Terminal,
       interactive: <DiagnosticShuffler />
     },
     {
       title: "Automatisches Frühwarnsystem",
-      desc: "SLA fast verletzt? Deadline in Gefahr? Kunde seit 3 Tagen ohne Update? Das System schlägt Alarm, bevor etwas eskaliert — kein manuelles Nachhalten mehr.",
+      desc: "SLA fast verletzt? Deadline in Gefahr? Kunde seit 3 Tagen ohne Update? Das System schlägt Alarm, bevor etwas eskaliert. Kein manuelles Nachhalten mehr nötig.",
       icon: ShieldAlert,
       interactive: <GaugeCluster />
     }

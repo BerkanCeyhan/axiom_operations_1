@@ -52,7 +52,7 @@ const Hero = ({ theme }) => {
 
             {/* Subheadline */}
             <p className="font-sans font-normal text-primary/80 text-base md:text-lg lg:text-xl max-w-prose leading-[1.7] mb-10">
-              Wir automatisieren dein Fulfillment mit KI-Agenten und smarten Prozessen — damit du skalieren kannst, ohne für jeden neuen Kunden einen neuen Mitarbeiter einzustellen. Schluss mit operativem Chaos, explodierenden Personalkosten und dem Gefühl, der ewige Flaschenhals zu sein.
+              Wir automatisieren dein Fulfillment mit KI-Agenten und smarten Prozessen. Du skalierst, ohne für jeden neuen Kunden einen neuen Mitarbeiter einstellen zu müssen. Kein operatives Chaos mehr, keine explodierenden Personalkosten, kein Flaschenhals-Dasein.
             </p>
 
             {/* Social Proof Micro-strip */}

@@ -23,7 +23,7 @@ const Footer = ({ theme }) => {
               Axiom
             </div>
             <p className="font-sans text-muted text-sm leading-[1.8] max-w-sm mb-8">
-              Wir automatisieren Fulfillment, Vertrieb und Prozesse für Agenturen und Dienstleister — mit KI-Agenten und smarten Automationen.
+              Wir automatisieren Fulfillment, Vertrieb und Prozesse für Agenturen und Dienstleister. Mit KI-Agenten und smarten Automationen.
             </p>
             <div className="flex items-center gap-2">
               <span className={`w-1.5 h-1.5 rounded-full animate-pulse transition-shadow ${isLight ? 'bg-accent shadow-[0_0_8px_rgba(59,79,58,0.8)]' : 'bg-accent shadow-[0_0_8px_rgba(59,79,58,0.5)]'}`} />

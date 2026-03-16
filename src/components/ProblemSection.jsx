@@ -34,7 +34,7 @@ const ProblemSection = () => {
             Jeder neue Kunde fühlt sich an wie eine Gefahr für das System.
           </h2>
           <p className="font-sans text-muted text-lg md:text-xl leading-[1.7] max-w-2xl">
-            Du steckst in der Wachstumsfalle. Das Pricing stimmt, der Sales-Prozess läuft, aber das Fulfillment bricht unter der Last zusammen. Statt unternehmerischer Freiheit bedeutet Skalierung für dich aktuell nur: mehr Brände löschen, mehr Slack-Nachrichten am späten Abend — und die Frage, ob der nächste Kunde dein Team endgültig überlastet.
+            Du steckst in der Wachstumsfalle. Das Pricing stimmt, der Sales-Prozess läuft, aber das Fulfillment bricht unter der Last zusammen. Skalierung bedeutet für dich gerade nicht unternehmerische Freiheit, sondern Brände löschen, Slack-Nachrichten um 22 Uhr und die Frage, ob der nächste Kunde dein Team endgültig überlastet.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ const ProblemSection = () => {
             <AlertTriangle className="text-accent w-8 h-8 mb-6 stroke-[1.5]" />
             <h3 className="font-sans text-primary text-xl mb-4 font-normal tracking-[-0.02em]">Das operative Chaos</h3>
             <p className="font-sans text-muted leading-[1.7]">
-              Onboardings laufen manuell, Aufgaben werden per Slack hin- und hergeschoben, und wenn jemand eine E-Mail vergisst, platzt die Deadline. Dein Team verbringt mehr Zeit damit, Infos in Drive-Ordnern zusammenzusuchen, als produktiv zu arbeiten.
+              Onboardings laufen manuell, Aufgaben werden per Slack hin- und hergeschoben, und wenn jemand eine E-Mail vergisst, platzt die Deadline. Dein Team verbringt mehr Zeit damit, Infos in Drive-Ordnern zusammenzusuchen, als tatsächlich produktiv zu arbeiten.
             </p>
           </div>
 
@@ -51,7 +51,7 @@ const ProblemSection = () => {
             <ActivitySquare className="text-accent w-8 h-8 mb-6 stroke-[1.5]" />
             <h3 className="font-sans text-primary text-xl mb-4 font-normal tracking-[-0.02em]">Explodierende Personalkosten</h3>
             <p className="font-sans text-muted leading-[1.7]">
-              Jeder Umsatzsprung wird sofort durch neue Gehälter für simple Fleißarbeit aufgefressen. Du stellst Leute ein, die eigentlich nur Copy-Paste-Aufgaben zwischen Tools erledigen, anstatt echte Hebelwirkung zu erzeugen. Die Marge sinkt, obwohl der Umsatz steigt.
+              Jeder Umsatzsprung wird sofort durch neue Gehälter für simple Fleißarbeit aufgefressen. Du stellst Leute ein, die eigentlich nur Copy-Paste-Aufgaben zwischen Tools erledigen, statt echte Hebelwirkung zu erzeugen. Die Marge sinkt, obwohl der Umsatz steigt.
             </p>
           </div>
 
