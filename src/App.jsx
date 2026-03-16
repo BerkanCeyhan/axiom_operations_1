@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [theme, setTheme] = useState('dark');
+  const [isNavbarOverLight, setIsNavbarOverLight] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -26,9 +27,24 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const proofSection = document.getElementById('proof');
+      if (proofSection) {
+        const rect = proofSection.getBoundingClientRect();
+        // Detect if Navbar (roughly 80px from top including margin) is within section boundaries
+        const isOver = rect.top <= 80 && rect.bottom >= 40;
+        setIsNavbarOverLight(isOver);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
-      <Navbar theme={theme} />
+      <Navbar theme={theme} isOverLight={isNavbarOverLight} />
       <Hero theme={theme} />
       <div id="content-start">
         <ProblemSection theme={theme} />
