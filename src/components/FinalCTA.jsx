@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
-const FinalCTA = () => {
+const FinalCTA = ({ theme }) => {
   const containerRef = useRef(null);
+  const isLight = theme === 'light';
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -48,8 +49,15 @@ const FinalCTA = () => {
         </h2>
 
         <div className="cta-btn-wrap relative inline-block">
-          <Link to="/audit" className="btn-primary inline-flex items-center group relative z-10 w-full sm:w-auto px-10 py-5">
-            <span className="relative z-10 group-hover:text-dark">Kostenloses Architektur-Audit anfragen</span>
+          <Link 
+            to="/audit" 
+            className="group relative z-10 w-full sm:w-auto px-10 py-5 font-mono text-sm uppercase tracking-widest transition-all duration-300 inline-flex items-center"
+            style={{ 
+              backgroundColor: isLight ? '#141312' : '#E7E2D8',
+              color: isLight ? '#E8E4DC' : '#0F0F0E'
+            }}
+          >
+            <span className="relative z-10">Kostenloses Architektur-Audit anfragen</span>
           </Link>
           {/* Subtle pulse ring */}
           <div className="absolute inset-0 border border-primary/20 opacity-0 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] z-0 pointer-events-none" />
