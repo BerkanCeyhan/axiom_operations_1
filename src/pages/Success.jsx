@@ -62,9 +62,14 @@ const Success = () => {
           Vielen Dank.
         </h1>
         
-        <p className="font-sans text-muted text-lg md:text-xl leading-[1.8] mb-12 max-w-md mx-auto">
-          Deine Buchung war erfolgreich. Du erhältst in Kürze eine Bestätigungsmail mit allen Details und dem Meeting-Link. Wir freuen uns auf das Gespräch!
-        </p>
+        <div className="font-sans text-muted text-lg md:text-xl leading-[1.8] mb-12 max-w-lg mx-auto space-y-6">
+          <p>
+            Wir rufen dich zum vereinbarten Zeitpunkt an. Bitte halte dein Telefon bereit und stelle sicher, dass du in einer ruhigen Umgebung bist.
+          </p>
+          <p>
+            Bis dann, wir freuen uns auf das Gespräch!
+          </p>
+        </div>
 
         <Link
           to="/"
