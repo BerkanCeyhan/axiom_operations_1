@@ -117,36 +117,20 @@ const Datenschutz = () => {
 
           <div className="h-px bg-border" />
 
-          <Section number="04" title="Google Fonts">
+          <Section number="04" title="Lokale Schriftarten (Google Fonts)">
             <p>
-              Diese Website verwendet{' '}
-              <strong className="text-primary font-medium">Google Fonts</strong>, einen Dienst
-              der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+              Diese Website verwendet zur einheitlichen Darstellung von Schriftarten lokale Kopien von{' '}
+              <strong className="text-primary font-medium">Google Fonts</strong>.
             </p>
             <p>
-              Beim Laden der Seite werden die Schriftarten direkt von den Servern von Google
-              abgerufen. Dabei wird deine IP-Adresse an Google übermittelt. Google kann dadurch
-              unter Umständen nachvollziehen, dass du unsere Website besucht hast.
-            </p>
-            <p>
-              Wir nutzen Google Fonts ausschließlich zur einheitlichen Darstellung der Typografie
-              dieser Website. Die Einbindung erfolgt über einen{' '}
-              <code className="font-mono text-sm bg-white/5 px-2 py-0.5 rounded text-accent">
-                &lt;link&gt;
-              </code>{' '}
-              Tag in den HTML-Headern der Seite.
+              Im Gegensatz zur Standardeinbindung werden diese Schriftarten nicht von den Servern von Google
+              abgerufen, sondern direkt von unserem Webserver geladen. Dadurch findet beim Seitenaufruf{' '}
+              <strong className="text-accent underline decoration-1 underline-offset-4">keine</strong> Übermittlung
+              deiner IP-Adresse oder anderer Daten an Google statt.
             </p>
             <p>
               Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an
-              einheitlichem Erscheinungsbild). Informationen zur Datenverarbeitung durch Google:{' '}
-              <a
-                href="https://policies.google.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:text-primary transition-colors underline underline-offset-4 decoration-accent/30"
-              >
-                Google Privacy Policy
-              </a>
+              einheitlichem Erscheinungsbild und datenschutzfreundlicher technischer Umsetzung).
             </p>
           </Section>
 
