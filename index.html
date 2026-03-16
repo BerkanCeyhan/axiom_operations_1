@@ -15,7 +15,7 @@
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
       (function(l) {
-        if (l.search[1] === '/' ) {
+        if (l.search && l.search[1] === '/' ) {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
@@ -26,12 +26,12 @@
       }(window.location))
     </script>
     <title>Axiom Operations | Resilient Ops Architektur</title>
-    <script type="module" crossorigin src="/assets/index-Dq-XQFpG.js"></script>
+    <script type="module" crossorigin src="/assets/index-C3eWhHRz.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-DF2fYuay.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-C0hYci0u.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-react-DFfhSqMz.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-gsap-Bsw38si_.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-TXAnpLkk.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-V6IRkyGV.css">
   </head>
   <body class="antialiased font-sans selection:bg-accent selection:text-primary">
     <div id="root"></div>
