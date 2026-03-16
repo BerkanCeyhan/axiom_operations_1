@@ -86,7 +86,7 @@ function App() {
         <FinalCTA theme={theme} />
         <Footer theme={theme} />
       </div>
-      <MobileCTABar theme={theme} />
+      {/* <MobileCTABar theme={theme} /> */}
     </div>
   );
 }
