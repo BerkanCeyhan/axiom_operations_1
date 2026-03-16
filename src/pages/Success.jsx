@@ -1,10 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShaderCanvas from '../components/ShaderCanvas';
 
 const Success = () => {
+  const [theme, setTheme] = useState('dark');
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Theme detection
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('v') === 'L') {
+      setTheme('light');
+      document.documentElement.classList.add('theme-light');
+    } else {
+      setTheme('dark');
+      document.documentElement.classList.remove('theme-light');
+    }
+
     // Dynamic SEO
     document.title = 'Vielen Dank | Axiom Operations';
     
@@ -43,45 +56,63 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-dark flex flex-col items-center justify-center px-6 overflow-hidden">
+    <div className={`relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden transition-colors duration-700 ${theme === 'light' ? 'bg-[#E7E2D]' : 'bg-dark'}`}>
       {/* Background Shader */}
       <div className="absolute inset-0 z-0 opacity-40">
-        <ShaderCanvas theme="dark" />
+        <ShaderCanvas theme={theme} />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-2xl">
-        <div className="mb-12 inline-flex items-center gap-3 px-4 py-2 border border-accent/20 bg-accent/5 rounded-full">
-          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
-            Termin Bestätigt
-          </span>
-        </div>
+      {/* Glass Panel Content Container */}
+      <div className={`relative z-10 w-full max-w-2xl px-8 py-16 md:px-12 md:py-24 backdrop-blur-xl border transition-all duration-700 ${
+        theme === 'light' 
+          ? 'bg-dark/5 border-dark/10 shadow-2xl shadow-dark/5' 
+          : 'bg-white/5 border-white/10 shadow-2xl shadow-black/20'
+      }`}>
+        <div className="text-center">
+          <div className={`mb-12 inline-flex items-center gap-3 px-4 py-2 border rounded-full transition-colors duration-700 ${
+            theme === 'light' ? 'border-dark/20 bg-dark/5' : 'border-accent/20 bg-accent/5'
+          }`}>
+            <span className={`w-2 h-2 rounded-full animate-pulse ${theme === 'light' ? 'bg-dark' : 'bg-accent'}`} />
+            <span className={`font-mono text-[10px] uppercase tracking-[0.2em] ${theme === 'light' ? 'text-dark' : 'text-accent'}`}>
+              Termin Bestätigt
+            </span>
+          </div>
 
-        <h1 className="font-drama italic text-primary text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] mb-8">
-          Vielen Dank.
-        </h1>
-        
-        <div className="font-sans text-muted text-lg md:text-xl leading-[1.8] mb-12 max-w-lg mx-auto space-y-6">
-          <p>
-            Wir rufen dich zum vereinbarten Zeitpunkt an. Bitte halte dein Telefon bereit und stelle sicher, dass du in einer ruhigen Umgebung bist.
-          </p>
-          <p>
-            Bis dann, wir freuen uns auf das Gespräch!
-          </p>
-        </div>
+          <h1 className={`font-drama italic text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] mb-8 transition-colors duration-700 ${
+            theme === 'light' ? 'text-dark' : 'text-primary'
+          }`}>
+            Vielen Dank.
+          </h1>
+          
+          <div className={`font-sans text-lg md:text-xl leading-[1.8] mb-12 max-w-lg mx-auto space-y-6 transition-colors duration-700 ${
+            theme === 'light' ? 'text-dark/80' : 'text-muted'
+          }`}>
+            <p>
+              Wir rufen dich zum vereinbarten Zeitpunkt an. Bitte halte dein Telefon bereit und stelle sicher, dass du in einer ruhigen Umgebung bist.
+            </p>
+            <p>
+              Bis dann, wir freuen uns auf das Gespräch!
+            </p>
+          </div>
 
-        <Link
-          to="/"
-          className="inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-primary hover:text-accent transition-all duration-500 border border-primary/20 hover:border-accent bg-primary/5 hover:bg-accent/10 px-10 py-5 rounded-none group"
-        >
-          <span className="transition-transform duration-500 group-hover:-translate-x-1">←</span>
-          Zurück zur Hauptseite
-        </Link>
+          <Link
+            to={theme === 'light' ? '/?v=L' : '/'}
+            className={`inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest transition-all duration-500 border px-10 py-5 rounded-none group ${
+              theme === 'light'
+                ? 'text-dark border-dark/20 hover:border-dark hover:bg-dark/5'
+                : 'text-primary border-primary/20 hover:border-accent hover:bg-accent/10 hover:text-accent'
+            }`}
+          >
+            <span className="transition-transform duration-500 group-hover:-translate-x-1">←</span>
+            Zurück zur Hauptseite
+          </Link>
+        </div>
       </div>
 
       {/* Minimal Brand Mark */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.4em] text-muted/30">
+      <div className={`absolute bottom-12 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.4em] transition-colors duration-700 ${
+        theme === 'light' ? 'text-dark/20' : 'text-muted/30'
+      }`}>
         Axiom Operations
       </div>
     </div>
