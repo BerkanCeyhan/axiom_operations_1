@@ -17,8 +17,26 @@ const Impressum = lazy(() => import('./pages/Impressum'));
 const Datenschutz = lazy(() => import('./pages/Datenschutz'));
 const Audit = lazy(() => import('./pages/Audit'));
 
-// Simple loading skeleton to prevent layout shift
-const SectionPlaceholder = () => <div className="min-h-[50vh] bg-dark" />;
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Home component to wrap the landing page sections
+const Home = ({ theme, isNavbarOverLight, activeSection }) => (
+  <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
+    <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
+    <Hero theme={theme} />
+    <div id="content-start">
+      <ProblemSection theme={theme} />
+      <FailedSolutions theme={theme} />
+      <Mechanism theme={theme} />
+      <Capabilities theme={theme} />
+      <SocialProof theme={theme} />
+      <Process theme={theme} />
+      <FAQ theme={theme} />
+      <FinalCTA theme={theme} />
+      <Footer theme={theme} />
+    </div>
+  </div>
+);
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -82,30 +100,16 @@ function App() {
   return (
     <Suspense fallback={<SectionPlaceholder />}>
       <Routes>
+        {/* Main Landing Page */}
+        <Route path="/" element={<Home theme={theme} isNavbarOverLight={isNavbarOverLight} activeSection={activeSection} />} />
+
         {/* Legal Pages */}
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/audit" element={<Audit />} />
 
-        {/* Main Landing Page */}
-        <Route path="*" element={
-          <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
-            <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
-            <Hero theme={theme} />
-            <div id="content-start">
-              <ProblemSection theme={theme} />
-              <FailedSolutions theme={theme} />
-              <Mechanism theme={theme} />
-              <Capabilities theme={theme} />
-              <SocialProof theme={theme} />
-              <Process theme={theme} />
-              <FAQ theme={theme} />
-              <FinalCTA theme={theme} />
-              <Footer theme={theme} />
-            </div>
-            {/* <MobileCTABar theme={theme} /> */}
-          </div>
-        } />
+        {/* Catch-all 404 Page */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );
