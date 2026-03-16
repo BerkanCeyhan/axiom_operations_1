@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
+    "postbuild": "mkdir -p dist/audit dist/impressum dist/datenschutz dist/agb && cp dist/index.html dist/audit/index.html && cp dist/index.html dist/impressum/index.html && cp dist/index.html dist/datenschutz/index.html && cp dist/index.html dist/agb/index.html",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
