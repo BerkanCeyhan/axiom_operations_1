@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MobileCTABar from './components/MobileCTABar';
@@ -11,6 +12,9 @@ import Process from './components/Process';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import Impressum from './pages/Impressum';
+import Datenschutz from './pages/Datenschutz';
+import Audit from './pages/Audit';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -72,22 +76,32 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
-      <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
-      <Hero theme={theme} />
-      <div id="content-start">
-        <ProblemSection theme={theme} />
-        <FailedSolutions theme={theme} />
-        <Mechanism theme={theme} />
-        <Capabilities theme={theme} />
-        <SocialProof theme={theme} />
-        <Process theme={theme} />
-        <FAQ theme={theme} />
-        <FinalCTA theme={theme} />
-        <Footer theme={theme} />
-      </div>
-      {/* <MobileCTABar theme={theme} /> */}
-    </div>
+    <Routes>
+      {/* Legal Pages */}
+      <Route path="/impressum" element={<Impressum />} />
+      <Route path="/datenschutz" element={<Datenschutz />} />
+      <Route path="/audit" element={<Audit />} />
+
+      {/* Main Landing Page */}
+      <Route path="*" element={
+        <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
+          <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
+          <Hero theme={theme} />
+          <div id="content-start">
+            <ProblemSection theme={theme} />
+            <FailedSolutions theme={theme} />
+            <Mechanism theme={theme} />
+            <Capabilities theme={theme} />
+            <SocialProof theme={theme} />
+            <Process theme={theme} />
+            <FAQ theme={theme} />
+            <FinalCTA theme={theme} />
+            <Footer theme={theme} />
+          </div>
+          {/* <MobileCTABar theme={theme} /> */}
+        </div>
+      } />
+    </Routes>
   );
 }
 

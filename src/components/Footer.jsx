@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = ({ theme }) => {
   const isLight = theme === 'light';
   return (
@@ -44,10 +46,10 @@ const Footer = ({ theme }) => {
           <div className="md:col-span-3">
             <h4 className="font-sans text-primary mb-6 font-medium">Legal & Kontakt</h4>
             <ul className="flex flex-col gap-3 font-sans text-muted text-sm">
-              <li><a href="#" className="hover:text-primary transition-colors">Impressum</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Datenschutz</a></li>
+              <li><Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link></li>
+              <li><Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">AGB</a></li>
-              <li className="mt-4"><a href="mailto:systems@axiom-operations.com" className="font-mono text-[11px] truncate block hover:text-primary transition-colors">systems@axiom-operations.com</a></li>
+              <li className="mt-4"><a href="mailto:berkan@berkanceyhan.de" className="font-mono text-[11px] truncate block hover:text-primary transition-colors">berkan@berkanceyhan.de</a></li>
             </ul>
           </div>
           

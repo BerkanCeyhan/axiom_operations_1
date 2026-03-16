@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import ShaderCanvas from './ShaderCanvas';
 
@@ -61,9 +62,9 @@ const Hero = ({ theme }) => {
 
             {/* CTA */}
             <div className="inline-block">
-              <a href="#audit" className="btn-hero inline-flex items-center text-white text-xs  md:text-lg">
+              <Link to="/audit" className="btn-hero inline-flex items-center text-white text-xs  md:text-lg">
                 <span>Kostenloses Architektur-Audit anfragen</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ theme, isOverLight, activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,26 +53,26 @@ const Navbar = ({ theme, isOverLight, activeSection }) => {
           ))}
         </nav>
 
-        <a
-          href="#audit"
+        <Link
+          to="/audit"
           className={`hidden md:inline-flex items-center justify-center border transition-all duration-300 px-6 py-2.5 font-mono text-[10px] uppercase tracking-widest rounded-none ${useDarkColors
             ? 'border-[#0F0F0E] bg-transparent text-[#0F0F0E] hover:bg-[#0F0F0E] hover:text-white'
             : 'border-accent bg-transparent text-primary hover:bg-accent hover:text-primary'
             }`}
         >
           Audit
-        </a>
+        </Link>
 
         {/* Mobile simplified CTA button in nav */}
-        <a
-          href="#audit"
+        <Link
+          to="/audit"
           className={`md:hidden inline-flex items-center justify-center border px-4 py-2 font-mono text-[9px] uppercase tracking-widest transition-colors ${useDarkColors
             ? 'border-[#0F0F0E]/10 text-[#0F0F0E] hover:bg-[#0F0F0E] hover:text-white'
             : 'border-border text-primary hover:bg-primary hover:text-dark'
             }`}
         >
           Audit
-        </a>
+        </Link>
       </div>
     </header>
   );
