@@ -34,7 +34,7 @@ const MobileCTABar = () => {
           to="/audit" 
           className="w-full flex items-center justify-center border border-border bg-transparent text-primary hover:bg-primary hover:text-dark transition-all duration-300 min-h-[48px] px-6 font-mono text-xs uppercase tracking-widest rounded-none"
         >
-          Kostenloses Architektur-Audit anfragen
+          Kostenlose Prozess-Analyse anfragen
         </Link>
       </div>
     </div>

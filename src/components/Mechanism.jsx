@@ -74,23 +74,23 @@ const Mechanism = () => {
           <div className="mb-8">
             <h2 className="mech-text flex flex-col gap-2">
               <span className="font-sans font-light text-muted uppercase tracking-[0.05em] text-sm md:text-base">
-                Die meisten fokussieren sich auf: <span className="text-primary/70 line-through decoration-muted/50">isolierte Tool-Hacks.</span>
+                Die meisten automatisieren einzelne Schritte.
               </span>
               <span className="font-drama italic text-primary leading-[1.1] text-[clamp(2.5rem,5vw,4.5rem)] mt-2">
-                Wir bauen: <span className="text-accent underline decoration-1 underline-offset-8">Ganzheitliche Systeme.</span>
+                Wir automatisieren den <span className="text-accent underline decoration-1 underline-offset-8">gesamten Prozess.</span>
               </span>
             </h2>
           </div>
           
           <div className="space-y-6">
             <p className="mech-text font-sans text-muted leading-[1.7] text-lg">
-              Die <strong>Resilient Ops Architektur™</strong> ist kein Pflaster für akute Schmerzen. Es ist ein tiefgreifender architektonischer Eingriff, der die operative Arbeit vom Menschen entkoppelt.
+              Die <strong>Resilient Ops Architektur™</strong> ist kein Pflaster für akute Schmerzen. Es ist ein System, das die operative Arbeit von dir und deinem Team entkoppelt.
             </p>
             <p className="mech-text font-sans text-muted leading-[1.7] text-lg">
-              Deshalb setzen wir nicht auf ein wackeliges Zapier-Chaos, das beim kleinsten Edge-Case zusammenbricht. Wir entwerfen ein in sich geschlossenes, digitales Nervensystem. Datenbanken, Kommunikationskanäle und operative Tools verschmelzen durch maßgeschneiderte KI-Agenten zu einer Einheit.
+              Wir bauen keine einzelnen Automationen. Wir verbinden KI-Agenten, Automationen und klare Prozesse zu einem zusammenhängenden System, das dein Fulfillment zu 90% ohne menschlichen Eingriff abwickelt.
             </p>
             <p className="mech-text font-sans text-muted leading-[1.7] text-lg">
-              Das bedeutet: Aufgaben werden autonom zugewiesen, Wissen wird zentral aggregiert und Fehler werden vom System abgefangen, bevor ein Kunde überhaupt etwas davon mitbekommt. <strong className="font-normal text-primary">Das Ergebnis ist brutale Ausfallsicherheit und grenzenlose Skalierbarkeit für Dienstleister und Agenturen.</strong>
+              Das bedeutet: Aufgaben werden automatisch zugewiesen, Wissen ist zentral abrufbar und Fehler werden abgefangen, bevor dein Kunde überhaupt etwas davon mitbekommt. <strong className="font-normal text-primary">Mehr Kunden, gleiche Teamgröße, steigende Marge.</strong>
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ const Mechanism = () => {
                 <div className="absolute inset-0 border border-accent rounded-lg opacity-50 animate-ping !duration-3000" />
                 <Activity size={20} className="text-primary" />
               </div>
-              <span className="font-mono text-[10px] uppercase text-muted tracking-widest bg-dark px-2 rounded">Client Input</span>
+              <span className="font-mono text-[10px] uppercase text-muted tracking-widest bg-dark px-2 rounded">Kundenanfrage</span>
             </div>
 
             {/* AI Router Node */}
@@ -141,7 +141,7 @@ const Mechanism = () => {
               <div className="w-14 h-14 rounded-lg bg-accent/20 border border-accent flex items-center justify-center shadow-lg shadow-black/50">
                 <Cpu size={24} className="text-accent" />
               </div>
-              <span className="font-mono text-[10px] uppercase text-accent tracking-widest bg-dark px-2 rounded">AI Router</span>
+              <span className="font-mono text-[10px] uppercase text-accent tracking-widest bg-dark px-2 rounded">KI-Routing</span>
             </div>
 
             {/* RAG Knowledge Node */}
@@ -149,7 +149,7 @@ const Mechanism = () => {
               <div className="w-12 h-12 rounded-lg bg-dark border border-border flex items-center justify-center shadow-lg shadow-black/50">
                 <Database size={20} className="text-primary" />
               </div>
-              <span className="font-mono text-[10px] uppercase text-muted tracking-widest bg-dark px-2 rounded">Wissens-Silo</span>
+              <span className="font-mono text-[10px] uppercase text-muted tracking-widest bg-dark px-2 rounded">Wissensdatenbank</span>
             </div>
 
             {/* Execution / SLA Node */}
@@ -158,7 +158,7 @@ const Mechanism = () => {
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent" />
                 <Workflow size={20} className="text-primary" />
               </div>
-              <span className="font-mono text-[10px] uppercase text-primary tracking-widest bg-dark px-2 rounded">Autonome Task</span>
+              <span className="font-mono text-[10px] uppercase text-primary tracking-widest bg-dark px-2 rounded">Automatische Aufgabe</span>
             </div>
             
           </div>

@@ -29,7 +29,7 @@ const AgentGrid = ({ theme }) => {
 
   return (
     <div className="grid grid-cols-2 gap-3 h-full p-4 items-center">
-      {[ 'CRM Webhook', 'Data Enrich', 'Board Create', 'Task Assign' ].map((label, i) => (
+      {[ 'CRM-Anbindung', 'Datenanreicherung', 'Projekt-Setup', 'Aufgabenzuweisung' ].map((label, i) => (
         <div key={i} className="status-node flex items-center gap-3 p-3 border border-border rounded bg-transparent transition-colors">
           <div className="node-dot w-2 h-2 rounded-full bg-muted shrink-0" />
           <span className="font-mono text-[10px] uppercase tracking-wider text-muted truncate">{label}</span>
@@ -42,7 +42,7 @@ const AgentGrid = ({ theme }) => {
 // --- Pattern 2: Command Line ---
 const CommandLineInfo = ({ theme }) => {
   const [text, setText] = useState('');
-  const fullText = `> query knowledge-base --target="SOP-Onboarding"\n> scanning 142 documents...\n✓ Match found (Confidence 98%)\n\n"Der Client-Kickoff benötigt das ausgefüllte Intake-Formular. Letzte Änderung durch Sarah am 14.02."`;
+  const fullText = `> Frage: "Wie läuft das Onboarding für Agenturkunden?"\n> Durchsuche 142 Dokumente...\n✓ Antwort gefunden (Vertrauen 98%)\n\n"Der Kickoff-Prozess benötigt das ausgefüllte Intake-Formular. Letzte Änderung durch Sarah am 14.02."`;
   
   useEffect(() => {
     let current = '';
@@ -117,9 +117,9 @@ const DiagnosticShuffler = () => {
   }, []);
 
   const items = [
-    { title: 'Signal: Series B Funding', desc: 'TechCrunch Article detected 12m ago.' },
-    { title: 'Intent: Competitor dropped', desc: 'Job posting for In-house SEO removed.' },
-    { title: 'Action: 1-Pager created', desc: 'Personalized angle generated for Sales.' }
+    { title: 'Signal erkannt: Series-B-Finanzierung', desc: 'TechCrunch-Artikel vor 12 Min. entdeckt.' },
+    { title: 'Kaufsignal: Wettbewerber verloren', desc: 'Stellenanzeige für Inhouse-SEO gelöscht.' },
+    { title: 'Aktion: Sales-Briefing erstellt', desc: 'Personalisierter Gesprächswinkel für den Call generiert.' }
   ];
 
   return (
@@ -173,8 +173,8 @@ const GaugeCluster = () => {
         </div>
       </div>
       <div className="flex justify-between w-full max-w-[200px] px-2">
-        <span className="font-mono text-[9px] uppercase tracking-widest text-muted">SLA Status</span>
-        <span className="font-mono text-[9px] uppercase tracking-widest text-muted">System Latency</span>
+        <span className="font-mono text-[9px] uppercase tracking-widest text-muted">SLA-Status</span>
+        <span className="font-mono text-[9px] uppercase tracking-widest text-muted">System-Latenz</span>
       </div>
     </div>
   );
@@ -188,26 +188,26 @@ const Capabilities = ({ theme }) => {
 
   const capabilities = [
     {
-      title: "KI-gestütztes Fulfillment-Routing",
-      desc: "Vollautomatisches Kunden-Onboarding, dynamische Projekt-Boards und autonome Task-Zuweisung in der Sekunde des Abschlusses.",
+      title: "Automatisches Kunden-Onboarding",
+      desc: "Neuer Deal abgeschlossen? Das System erstellt automatisch das Projekt-Board, weist Aufgaben ans Team zu und triggert die Willkommensmail — in Sekunden, ohne dass du eingreifen musst.",
       icon: GitMerge,
       interactive: <AgentGrid theme={theme} />
     },
     {
-      title: "Autonome Wissens-Silos (RAG)",
-      desc: "Eine interne KI, die auf alle SOPs und Kundendaten trainiert ist und dem Team sofort Antworten liefert, statt den Inhaber zu unterbrechen.",
+      title: "KI-Wissensdatenbank für dein Team",
+      desc: "Dein Team fragt die KI statt dich. SOPs, Prozesse, Kundendaten — alles zentral abrufbar. Neue Mitarbeiter sind in Tagen eingearbeitet statt in Wochen.",
       icon: Database,
       interactive: <CommandLineInfo theme={theme} />
     },
     {
-      title: "Lead-Scoring & Outreach-Prep",
-      desc: "KI, die vor dem Sales-Call alle relevanten Web-Daten und Signale des Leads zieht und in einem 1-Pager zusammenfasst.",
+      title: "Automatische Lead-Recherche & Scoring",
+      desc: "Vor jedem Sales-Call zieht die KI alle relevanten Infos und Kaufsignale des Leads und fasst sie in einem Sales-Briefing zusammen. Dein Vertriebler geht vorbereitet ins Gespräch — ohne manuelle Recherche.",
       icon: Terminal,
       interactive: <DiagnosticShuffler />
     },
     {
-      title: "Ausfallsicheres Controlling",
-      desc: "Automatisierte Warnsysteme, die sofort Alarm schlagen, bevor SLAs verletzt werden oder Deadlines platzen.",
+      title: "Automatisches Frühwarnsystem",
+      desc: "SLA fast verletzt? Deadline in Gefahr? Kunde seit 3 Tagen ohne Update? Das System schlägt Alarm, bevor etwas eskaliert — kein manuelles Nachhalten mehr.",
       icon: ShieldAlert,
       interactive: <GaugeCluster />
     }
@@ -219,14 +219,14 @@ const Capabilities = ({ theme }) => {
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-border pb-8">
           <div className="max-w-2xl">
             <h2 className="font-sans font-light text-primary text-[clamp(2rem,4vw,3rem)] leading-tight tracking-[-0.04em]">
-              Das operative Arsenal.
+              Was wir konkret für dich bauen.
             </h2>
             <p className="font-sans text-muted mt-4 text-lg max-w-xl">
-              Maßgeschneiderte Teilsysteme, die wie Zahnräder ineinandergreifen, um dein Fulfillment von manueller Arbeit zu befreien.
+              Maßgeschneiderte Systeme, die ineinandergreifen und dein Fulfillment von manueller Arbeit befreien.
             </p>
           </div>
           <div className="font-mono text-xs text-accent uppercase tracking-[0.2em] whitespace-nowrap">
-            [ System-Module aktiv ]
+            [ Systeme aktiv ]
           </div>
         </div>
 

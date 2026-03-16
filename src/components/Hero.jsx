@@ -45,25 +45,25 @@ const Hero = ({ theme }) => {
                   Die Resilient Ops Architektur™
                 </span>
                 <span className="font-drama italic text-primary leading-[0.9] text-[clamp(2.5rem,8vw,9rem)]">
-                  Ausfallsicher.
+                  Weniger Chaos. Mehr Marge.
                 </span>
               </h1>
             </div>
 
             {/* Subheadline */}
             <p className="font-sans font-normal text-primary/80 text-base md:text-lg lg:text-xl max-w-prose leading-[1.7] mb-10">
-              Wir bauen das ausfallsichere digitale Nervensystem für Agenturen mit 30k–150k MRR. Skalierung bedeutet nicht länger operatives Chaos, explodierende Personalkosten für Fleißarbeit oder das Gefühl, der ewige Flaschenhals im eigenen Fulfillment zu sein.
+              Wir automatisieren dein Fulfillment mit KI-Agenten und smarten Prozessen — damit du skalieren kannst, ohne für jeden neuen Kunden einen neuen Mitarbeiter einzustellen. Schluss mit operativem Chaos, explodierenden Personalkosten und dem Gefühl, der ewige Flaschenhals zu sein.
             </p>
 
             {/* Social Proof Micro-strip */}
             <div className="font-mono text-xs mb-8 tracking-widest uppercase">
-              // Verlässliche Infrastruktur für B2B-Dienstleister
+              // Für Agenturen, Dienstleister & Berater mit 5- bis 6-stelligen Monatsumsätzen
             </div>
 
             {/* CTA */}
             <div className="inline-block">
               <Link to="/audit" className="btn-hero inline-flex items-center text-white text-xs  md:text-lg">
-                <span>Kostenloses Architektur-Audit anfragen</span>
+                <span>Kostenlose Prozess-Analyse anfragen</span>
               </Link>
             </div>
           </div>

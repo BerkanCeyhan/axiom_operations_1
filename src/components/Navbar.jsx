@@ -60,7 +60,7 @@ const Navbar = ({ theme, isOverLight, activeSection }) => {
             : 'border-accent bg-transparent text-primary hover:bg-accent hover:text-primary'
             }`}
         >
-          Audit
+          Analyse
         </Link>
 
         {/* Mobile simplified CTA button in nav */}
@@ -71,7 +71,7 @@ const Navbar = ({ theme, isOverLight, activeSection }) => {
             : 'border-border text-primary hover:bg-primary hover:text-dark'
             }`}
         >
-          Audit
+          Analyse
         </Link>
       </div>
     </header>

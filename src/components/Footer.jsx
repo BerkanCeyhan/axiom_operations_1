@@ -23,11 +23,11 @@ const Footer = ({ theme }) => {
               Axiom
             </div>
             <p className="font-sans text-muted text-sm leading-[1.8] max-w-sm mb-8">
-              Architekten für ausfallsichere KI-Infrastruktur und maßgeschneiderte Unternehmensprozesse.
+              Wir automatisieren Fulfillment, Vertrieb und Prozesse für Agenturen und Dienstleister — mit KI-Agenten und smarten Automationen.
             </p>
             <div className="flex items-center gap-2">
               <span className={`w-1.5 h-1.5 rounded-full animate-pulse transition-shadow ${isLight ? 'bg-accent shadow-[0_0_8px_rgba(59,79,58,0.8)]' : 'bg-accent shadow-[0_0_8px_rgba(59,79,58,0.5)]'}`} />
-              <span className="font-mono text-[10px] text-muted uppercase tracking-widest pl-1">System Operational</span>
+              <span className="font-mono text-[10px] text-muted uppercase tracking-widest pl-1">System Betriebsbereit</span>
             </div>
           </div>
           

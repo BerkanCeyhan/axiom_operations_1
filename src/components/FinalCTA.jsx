@@ -44,7 +44,7 @@ const FinalCTA = ({ theme }) => {
             Die Wachstumsfalle durchbrechen.
           </span>
           <span className="font-drama italic text-muted text-2xl md:text-3xl leading-[1.1]">
-            Das Ende des operativen Chaos.
+            Schluss mit operativem Chaos.
           </span>
         </h2>
 
@@ -57,7 +57,7 @@ const FinalCTA = ({ theme }) => {
               color: isLight ? '#E8E4DC' : '#0F0F0E'
             }}
           >
-            <span className="relative z-10">Kostenloses Architektur-Audit anfragen</span>
+            <span className="relative z-10">Kostenlose Prozess-Analyse anfragen</span>
           </Link>
           {/* Subtle pulse ring */}
           <div className="absolute inset-0 border border-primary/20 opacity-0 animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] z-0 pointer-events-none" />
@@ -73,7 +73,7 @@ const FinalCTA = ({ theme }) => {
 
         <div className="cta-text font-mono text-[10px] text-accent tracking-widest uppercase mt-6">
           <span className="inline-block w-1.5 h-1.5 bg-accent animate-pulse mr-2" />
-          Aktuell 3 freie Setup-Slots für nächsten Monat
+          Aktuell 3 freie Plätze für nächsten Monat
         </div>
       </div>
     </section>

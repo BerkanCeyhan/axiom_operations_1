@@ -48,7 +48,7 @@ const FailedSolutions = () => {
             </svg>
             <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Mehr Mitarbeiter einstellen</h3>
             <p className="font-sans text-muted/80 leading-[1.7] relative z-20">
-              Jeder neue Kopf bringt nicht nur Arbeitskraft, sondern auch Kommunikations-Overhead. Die Fixkosten explodieren, während die Marge schmilzt. Du tauscht ein Fulfillment-Problem gegen ein Management-Problem.
+              Jeder neue Kopf bringt nicht nur Arbeitskraft, sondern auch Kommunikations-Overhead und Einarbeitungszeit. Die Fixkosten steigen, die Marge schmilzt — und du tauschst ein Fulfillment-Problem gegen ein Management-Problem.
             </p>
           </div>
 
@@ -56,9 +56,9 @@ const FailedSolutions = () => {
             <svg className="absolute inset-0 w-full h-full pointer-events-none stroke-accent/40 stroke-[2] z-10 hidden sm:block">
               <line className="strike-line" x1="0" y1="0" x2="100%" y2="100%" strokeDasharray="150%" strokeDashoffset="150%" />
             </svg>
-            <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Noch ein Software-Tool kaufen</h3>
+            <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Noch ein Tool oder eine Automatisierung</h3>
             <p className="font-sans text-muted/80 leading-[1.7] relative z-20">
-              Ein weiteres isoliertes Datensilo ohne klaren Prozess bringt keinen Hebel, sondern nur mehr Klicks. Ein wackeliges Setup aus dutzenden Tools führt irgendwann zum gefürchteten "Zapier-Chaos".
+              Tools und Automationen sind nur so gut wie die Strategie dahinter. Ein Zap hier, ein Make-Szenario da — ohne einen durchdachten Gesamtprozess entsteht nur ein neues Flickwerk, das beim nächsten Sonderfall auseinanderfällt.
             </p>
           </div>
 
@@ -68,15 +68,15 @@ const FailedSolutions = () => {
             </svg>
             <h3 className="font-sans text-primary/80 text-xl md:text-2xl mb-4 font-normal tracking-[-0.02em] relative z-20">Freelancer zur Entlastung</h3>
             <p className="font-sans text-muted/80 leading-[1.7] relative z-20">
-              Sie lindern den Schmerz kurzfristig, aber wenn sie das Projekt verlassen, stehst du wieder am Anfang. Das Kernsystem bleibt fragil und von externem Wissen abhängig.
+              Sie lindern den Schmerz kurzfristig, aber wenn sie das Projekt verlassen, geht das Wissen mit. Du stest wieder am Anfang — und das System bleibt genauso fragil wie vorher.
             </p>
           </div>
         </div>
 
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-sans font-light text-primary/90 text-lg md:text-xl leading-[1.6]">
-            Wenn mehr Mitarbeiter, Tools oder Freelancer die Antwort wären, hätten sie bei dir schon längst funktioniert. Du hast diese Wege bereits ausprobiert – und das operative Chaos ist geblieben.
-            <span className="block mt-4 text-accent">Es liegt nicht an den Tools. Es liegt an der Architektur.</span>
+            Wenn mehr Mitarbeiter, Tools oder Freelancer die Antwort wären, hätten sie bei dir schon längst funktioniert. Du hast diese Wege bereits ausprobiert — und das operative Chaos ist geblieben.
+            <span className="block mt-4 text-accent">Es liegt nicht an den einzelnen Tools. Es liegt daran, wie sie zusammenspielen.</span>
           </p>
         </div>
       </div>

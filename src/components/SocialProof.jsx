@@ -37,26 +37,26 @@ const SocialProof = () => {
   }, []);
 
   const metrics = [
-    { value: "40+", label: "Transformierte Agenturen" },
-    { value: "15h", label: "Wöchentliche Zeitersparnis pro MA" },
-    { value: "100%", label: "Ausfallsicherheit im Core-System", highlight: true }
+    { value: "40+", label: "Agenturen & Dienstleister betreut" },
+    { value: "15h+", label: "Zeitersparnis pro Mitarbeiter / Woche" },
+    { value: "100%", label: "Systemverfügbarkeit im laufenden Betrieb", highlight: true }
   ];
 
   const testimonials = [
     {
       name: "[Name des Kunden]",
       role: "Inhaber einer 80k MRR Performance-Agentur",
-      quote: "Vor Axiom war ich der größte Flaschenhals. Jede Freigabe, jedes Onboarding lief über meinen Schreibtisch. Jetzt läuft das System autark. Wir haben diesen Monat 4 neue Retainer geclosed, ohne dass sich die operative Last auch nur um 1% erhöht hat."
+      quote: "Jede Freigabe, jedes Onboarding lief über meinen Schreibtisch. Seit der Implementierung läuft das System autark. Wir haben 4 neue Retainer geclosed — ohne dass sich die operative Last erhöht hat."
     },
     {
       name: "[Name des Kunden]",
       role: "GF einer Webdesign-Agentur",
-      quote: "Das Ausmaß an Klarheit ist erschreckend. Das RAG-System Onboardet neue Mitarbeiter in Tagen statt Wochen. Die 14 Stunden Recherchearbeit pro Woche bei unseren Projektmanagern sind einfach weg."
+      quote: "Neue Mitarbeiter sind jetzt in Tagen eingearbeitet statt in Wochen. Die 14 Stunden Recherchearbeit pro Woche bei unseren Projektmanagern? Komplett weggefallen."
     },
     {
       name: "[Name des Kunden]",
       role: "Inhaber B2B-Consulting",
-      quote: "Ich dachte, wir bräuchten mehr Personal für den nächsten Skalierungsschritt. Die Wahrheit war: Wir brauchten einfach vernünftige Systeme. Die Resilient Ops Architektur hat unsere Personalkosten faktisch eingefroren, während der Umsatz um 30% gestiegen ist."
+      quote: "Ich dachte, wir brauchen mehr Leute für den nächsten Wachstumsschritt. Die Wahrheit war: Wir brauchten bessere Systeme. Die Personalkosten sind eingefroren, der Umsatz um 30% gestiegen."
     }
   ];
 
@@ -65,10 +65,10 @@ const SocialProof = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
           <h2 className="font-sans font-light text-[clamp(2.5rem,5vw,3.5rem)] leading-tight tracking-[-0.04em] mb-4 text-[#0F0F0E]">
-            Die Realität nach der Transformation.
+            Was sich nach der Implementierung ändert.
           </h2>
           <p className="font-sans text-[#0F0F0E]/70 text-lg max-w-2xl mx-auto">
-            Gute Konzepte klingen theoretisch immer nett. Was zählt, ist die messbare Reduktion von Chaos im Alltag.
+            Gute Konzepte klingen auf Papier immer gut. Was zählt, ist die messbare Veränderung in deinem Alltag.
           </p>
         </div>
 
