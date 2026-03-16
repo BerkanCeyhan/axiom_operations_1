@@ -197,7 +197,7 @@ const Audit = () => {
             {/* Calendly Inline Widget */}
             <div
               className="calendly-inline-widget w-full rounded-none overflow-hidden"
-              data-url="https://calendly.com/ceyhan-berkan1?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=e6e2da&primary_color=1fa344"
+              data-url="https://calendly.com/ceyhan-berkan1/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=e5e1da&primary_color=48cf6a"
               style={{ minWidth: '280px', height: '700px' }}
             />
           </div>
