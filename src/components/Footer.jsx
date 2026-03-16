@@ -5,18 +5,18 @@ const Footer = ({ theme }) => {
   return (
     <footer className="bg-dark pt-20 pb-12 px-6 md:px-12 border-t border-border relative overflow-hidden z-20">
       {/* Botanical strip: macro nature sign of life */}
-      <div 
+      <div
         className={`absolute inset-0 z-0 pointer-events-none grayscale ${isLight ? 'opacity-[0.08]' : 'opacity-[0.05]'}`}
-        style={{ 
+        style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1200&q=50")',
           backgroundSize: 'cover',
           backgroundPosition: 'bottom'
         }}
       />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mb-16">
-          
+
           {/* Brand Info */}
           <div className="md:col-span-5">
             <div className="font-mono text-sm tracking-[0.2em] text-primary uppercase mb-4 opacity-90">
@@ -30,7 +30,7 @@ const Footer = ({ theme }) => {
               <span className="font-mono text-[10px] text-muted uppercase tracking-widest pl-1">System Betriebsbereit</span>
             </div>
           </div>
-          
+
           {/* Navigation */}
           <div className="md:col-span-3 md:col-start-7">
             <h4 className="font-sans text-primary mb-6 font-medium">Plattform</h4>
@@ -41,7 +41,7 @@ const Footer = ({ theme }) => {
               <li><a href="#proof" className="hover:text-primary transition-colors">Ergebnisse</a></li>
             </ul>
           </div>
-          
+
           {/* Contact / Legal */}
           <div className="md:col-span-3">
             <h4 className="font-sans text-primary mb-6 font-medium">Legal & Kontakt</h4>
@@ -52,15 +52,15 @@ const Footer = ({ theme }) => {
               <li className="mt-4"><a href="mailto:berkan@berkanceyhan.de" className="font-mono text-[11px] truncate block hover:text-primary transition-colors">berkan@berkanceyhan.de</a></li>
             </ul>
           </div>
-          
+
         </div>
-        
+
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="font-sans text-muted/60 text-xs">
             © {new Date().getFullYear()} Axiom Operations. All rights reserved.
           </div>
           <div className="font-mono text-[9px] uppercase tracking-widest text-muted/40">
-            Resilient Ops Architektur™
+            Fulfillment OS™
           </div>
         </div>
       </div>

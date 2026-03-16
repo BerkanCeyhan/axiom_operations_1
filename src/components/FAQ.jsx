@@ -13,7 +13,7 @@ const faqData = [
   },
   {
     question: "Wir nutzen schon 15 verschiedene Tools... Müssen wir alles ändern?",
-    answer: "Ganz im Gegenteil. Die Resilient Ops Architektur integriert eure bestehenden Systeme (HubSpot, Slack, ClickUp, Asana etc.) durch Custom-APIs und Webhooks. Wir räumen euer Zapier-Chaos auf, aber eure Frontend-Tools bleiben oft gleich – sie werden nur durch unser unterliegendes Nervensystem endlich stabil."
+    answer: "Ganz im Gegenteil. Fulfillment OS integriert eure bestehenden Systeme (HubSpot, Slack, ClickUp, Asana etc.) durch Custom-APIs und Webhooks. Wir räumen euer Zapier-Chaos auf, aber eure Frontend-Tools bleiben oft gleich – sie werden nur durch unser unterliegendes Nervensystem endlich stabil."
   },
   {
     question: "Wie schnell sehen wir die Ergebnisse?",
@@ -62,8 +62,8 @@ const FAQ = () => {
 
         <div className="flex flex-col gap-4">
           {faqData.map((faq, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="faq-item bg-surface border border-border/60 rounded-lg overflow-hidden transition-colors hover:border-border cursor-pointer group"
               onClick={() => toggle(i)}
             >
@@ -75,10 +75,9 @@ const FAQ = () => {
                   <Plus strokeWidth={1.5} size={24} />
                 </div>
               </div>
-              <div 
-                className={`grid transition-all duration-300 ease-in-out ${
-                  openIndex === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
+              <div
+                className={`grid transition-all duration-300 ease-in-out ${openIndex === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
               >
                 <div className="overflow-hidden">
                   <p className="font-sans text-muted leading-[1.7] px-6 md:px-8 pb-6 md:pb-8">

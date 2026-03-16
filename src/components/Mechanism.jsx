@@ -4,7 +4,7 @@ import { Database, Network, Cpu, Activity, Workflow } from 'lucide-react';
 
 const Mechanism = () => {
   const containerRef = useRef(null);
-  
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Entry animations for the section
@@ -19,7 +19,7 @@ const Mechanism = () => {
           start: 'top 75%'
         }
       });
-      
+
       // Node entrance animation
       gsap.from('.mech-node', {
         scale: 0.8,
@@ -32,7 +32,7 @@ const Mechanism = () => {
           start: 'top 80%'
         }
       });
-      
+
       // Infinite pulse loops for the network edges
       gsap.to('.pulse-particle', {
         motionPath: {
@@ -44,7 +44,7 @@ const Mechanism = () => {
         ease: 'none',
         stagger: 0.5
       });
-      
+
     }, containerRef);
 
     return () => ctx.revert();
@@ -53,9 +53,9 @@ const Mechanism = () => {
   return (
     <section id="mechanism" ref={containerRef} className="section-padding bg-dark border-t border-border relative overflow-hidden">
       {/* Botanical Structural Element: High-contrast specimen nature in low light - Increased Visibility */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-[0.20] pointer-events-none grayscale mix-blend-screen"
-        style={{ 
+        style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1546559336-0c9f16da0890?auto=format&fit=crop&w=1200&q=60")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
@@ -68,7 +68,7 @@ const Mechanism = () => {
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
-        
+
         {/* Text Side */}
         <div className="z-10 text-primary">
           <div className="mb-8">
@@ -81,10 +81,10 @@ const Mechanism = () => {
               </span>
             </h2>
           </div>
-          
+
           <div className="space-y-6">
             <p className="mech-text font-sans text-muted leading-[1.7] text-lg">
-              Die <strong>Resilient Ops Architektur™</strong> ist kein Pflaster für akute Schmerzen. Es ist ein System, das die operative Arbeit von dir und deinem Team entkoppelt.
+              Die <strong>Fulfillment OS™</strong> ist kein Pflaster für akute Schmerzen. Es ist ein System, das die operative Arbeit von dir und deinem Team entkoppelt.
             </p>
             <p className="mech-text font-sans text-muted leading-[1.7] text-lg">
               Wir bauen keine einzelnen Automationen. Wir verbinden KI-Agenten, Automationen und klare Prozesse zu einem zusammenhängenden System, das dein Fulfillment zu 90% ohne menschlichen Eingriff abwickelt.
@@ -94,13 +94,13 @@ const Mechanism = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Visualization Side: The Flow Connector Pattern */}
         <div className="mech-viz-container relative w-full aspect-square md:aspect-[4/3] bg-surface border border-border rounded-lg overflow-hidden flex items-center justify-center p-4">
-          
+
           {/* Subtle grid background */}
           <div className="absolute inset-0 opacity-[0.1]" style={{ backgroundImage: 'radial-gradient(var(--text-muted) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-          
+
           {/* Flow Connector Structure */}
           <div className="relative w-full max-w-[400px] h-[300px] flex items-center justify-center z-10">
             {/* SVG Connecting Lines */}
@@ -110,7 +110,7 @@ const Mechanism = () => {
               <path id="path-3" d="M 200,50 L 350,150" fill="none" strokeWidth="1" />
               <path id="path-4" d="M 200,250 L 350,150" fill="none" strokeWidth="1" />
               <path id="path-5" d="M 200,50 L 200,250" fill="none" strokeWidth="1" strokeDasharray="4 4" className="opacity-50" />
-              
+
               {/* Animated particles along paths */}
               <circle r="3" fill="#3B4F3A" className="animate-[dash_3s_linear_infinite]">
                 <animateMotion dur="3s" repeatCount="indefinite" path="M 50,150 L 200,50" />
@@ -160,7 +160,7 @@ const Mechanism = () => {
               </div>
               <span className="font-mono text-[10px] uppercase text-primary tracking-widest bg-dark px-2 rounded">Automatische Aufgabe</span>
             </div>
-            
+
           </div>
         </div>
       </div>

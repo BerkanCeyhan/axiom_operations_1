@@ -42,7 +42,7 @@ const Hero = ({ theme }) => {
             <div className="mb-8">
               <h1 className="flex flex-col">
                 <span className="font-sans font-light uppercase tracking-[0.2em] text-xs sm:text-sm md:text-base mb-2 md:mb-4">
-                  Die Resilient Ops Architektur™
+                  Fulfillment OS™
                 </span>
                 <span className="font-drama italic text-primary leading-[0.9] text-[clamp(2.5rem,8vw,9rem)]">
                   Weniger Chaos. Mehr Marge.

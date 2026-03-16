@@ -20,12 +20,12 @@ const FailedSolutions = () => {
         stagger: 0.15,
         ease: 'power2.out',
       })
-      .to('.strike-line', {
-        strokeDashoffset: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power3.inOut',
-      }, '-=0.4');
+        .to('.strike-line', {
+          strokeDashoffset: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power3.inOut',
+        }, '-=0.4');
 
     }, containerRef);
 
@@ -37,7 +37,7 @@ const FailedSolutions = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
           <h2 className="font-sans font-light text-primary text-[clamp(2rem,4vw,3rem)] leading-tight tracking-[-0.04em]">
-            Warum die offensichtlichen Lösungen nicht funktionieren.
+            Warum die offensichtlichen Lösungen nicht funktionieren...
           </h2>
         </div>
 
