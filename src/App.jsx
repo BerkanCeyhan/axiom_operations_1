@@ -112,6 +112,7 @@ function App() {
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/audit" element={<Audit />} />
         <Route path="/agb" element={<AGB />} />
+        <Route path="/danke" element={<Success />} />
 
         {/* Catch-all 404 Page */}
         <Route path="*" element={<NotFound />} />
