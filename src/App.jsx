@@ -17,6 +17,7 @@ const Impressum = lazy(() => import('./pages/Impressum'));
 const Datenschutz = lazy(() => import('./pages/Datenschutz'));
 const Audit = lazy(() => import('./pages/Audit'));
 const AGB = lazy(() => import('./pages/AGB'));
+const Success = lazy(() => import('./pages/Success'));
 
 // Simple loading skeleton to prevent layout shift
 const SectionPlaceholder = () => <div className="min-h-[50vh] bg-dark" />;
