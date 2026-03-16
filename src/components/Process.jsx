@@ -136,7 +136,7 @@ const Process = () => {
               >
                 {step.bgElem}
                 <div className="relative z-10 p-8 md:p-16 flex flex-col justify-center w-full h-full">
-                  <div className="font-mono text-[6rem] md:text-[12rem] text-muted/5 font-medium leading-none absolute right-4 top-4 md:right-12 md:top-1/2 md:-translate-y-1/2 select-none pointer-events-none">
+                  <div className="font-mono text-[6rem] md:text-[12rem] text-muted/5 font-medium leading-none absolute right-4 bottom-4 md:right-12 md:top-1/2 md:-translate-y-1/2 select-none pointer-events-none">
                     {step.num}
                   </div>
                   <div className="max-w-2xl relative">
