@@ -1,20 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MobileCTABar from './components/MobileCTABar';
-import ProblemSection from './components/ProblemSection';
-import FailedSolutions from './components/FailedSolutions';
-import Mechanism from './components/Mechanism';
-import Capabilities from './components/Capabilities';
-import SocialProof from './components/SocialProof';
-import Process from './components/Process';
-import FAQ from './components/FAQ';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
-import Impressum from './pages/Impressum';
-import Datenschutz from './pages/Datenschutz';
-import Audit from './pages/Audit';
+
+// Lazy load below-the-fold components and subpages
+const ProblemSection = lazy(() => import('./components/ProblemSection'));
+const FailedSolutions = lazy(() => import('./components/FailedSolutions'));
+const Mechanism = lazy(() => import('./components/Mechanism'));
+const Capabilities = lazy(() => import('./components/Capabilities'));
+const SocialProof = lazy(() => import('./components/SocialProof'));
+const Process = lazy(() => import('./components/Process'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const FinalCTA = lazy(() => import('./components/FinalCTA'));
+const Footer = lazy(() => import('./components/Footer'));
+const Impressum = lazy(() => import('./pages/Impressum'));
+const Datenschutz = lazy(() => import('./pages/Datenschutz'));
+const Audit = lazy(() => import('./pages/Audit'));
+
+// Simple loading skeleton to prevent layout shift
+const SectionPlaceholder = () => <div className="min-h-[50vh] bg-dark" />;
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -76,32 +80,34 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      {/* Legal Pages */}
-      <Route path="/impressum" element={<Impressum />} />
-      <Route path="/datenschutz" element={<Datenschutz />} />
-      <Route path="/audit" element={<Audit />} />
+    <Suspense fallback={<SectionPlaceholder />}>
+      <Routes>
+        {/* Legal Pages */}
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+        <Route path="/audit" element={<Audit />} />
 
-      {/* Main Landing Page */}
-      <Route path="*" element={
-        <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
-          <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
-          <Hero theme={theme} />
-          <div id="content-start">
-            <ProblemSection theme={theme} />
-            <FailedSolutions theme={theme} />
-            <Mechanism theme={theme} />
-            <Capabilities theme={theme} />
-            <SocialProof theme={theme} />
-            <Process theme={theme} />
-            <FAQ theme={theme} />
-            <FinalCTA theme={theme} />
-            <Footer theme={theme} />
+        {/* Main Landing Page */}
+        <Route path="*" element={
+          <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
+            <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
+            <Hero theme={theme} />
+            <div id="content-start">
+              <ProblemSection theme={theme} />
+              <FailedSolutions theme={theme} />
+              <Mechanism theme={theme} />
+              <Capabilities theme={theme} />
+              <SocialProof theme={theme} />
+              <Process theme={theme} />
+              <FAQ theme={theme} />
+              <FinalCTA theme={theme} />
+              <Footer theme={theme} />
+            </div>
+            {/* <MobileCTABar theme={theme} /> */}
           </div>
-          {/* <MobileCTABar theme={theme} /> */}
-        </div>
-      } />
-    </Routes>
+        } />
+      </Routes>
+    </Suspense>
   );
 }
 

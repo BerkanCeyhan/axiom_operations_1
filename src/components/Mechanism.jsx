@@ -56,7 +56,7 @@ const Mechanism = () => {
       <div 
         className="absolute inset-0 z-0 opacity-[0.20] pointer-events-none grayscale mix-blend-screen"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1546559336-0c9f16da0890?auto=format&fit=crop&w=1920&q=80")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1546559336-0c9f16da0890?auto=format&fit=crop&w=1200&q=60")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

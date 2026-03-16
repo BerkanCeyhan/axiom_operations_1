@@ -8,7 +8,7 @@ const Footer = ({ theme }) => {
       <div 
         className={`absolute inset-0 z-0 pointer-events-none grayscale ${isLight ? 'opacity-[0.08]' : 'opacity-[0.05]'}`}
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1200&q=50")',
           backgroundSize: 'cover',
           backgroundPosition: 'bottom'
         }}
