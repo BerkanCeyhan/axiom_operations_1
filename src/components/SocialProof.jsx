@@ -61,13 +61,13 @@ const SocialProof = () => {
   ];
 
   return (
-    <section id="proof" ref={containerRef} className="section-padding bg-[#E8E4DC] text-dark relative overflow-hidden">
+    <section id="proof" ref={containerRef} className="section-padding bg-[#E8E4DC] text-[#0F0F0E] relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
-          <h2 className="font-sans font-light text-[clamp(2.5rem,5vw,3.5rem)] leading-tight tracking-[-0.04em] mb-4">
+          <h2 className="font-sans font-light text-[clamp(2.5rem,5vw,3.5rem)] leading-tight tracking-[-0.04em] mb-4 text-[#0F0F0E]">
             Die Realität nach der Transformation.
           </h2>
-          <p className="font-sans text-dark/70 text-lg max-w-2xl mx-auto">
+          <p className="font-sans text-[#0F0F0E]/70 text-lg max-w-2xl mx-auto">
             Gute Konzepte klingen theoretisch immer nett. Was zählt, ist die messbare Reduktion von Chaos im Alltag.
           </p>
         </div>
@@ -75,7 +75,7 @@ const SocialProof = () => {
         {/* Metrics Strip */}
         <div className="metrics-container grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-border/20 mb-20 md:mb-32">
           {metrics.map((m, i) => (
-            <div key={i} className={`metric-block flex flex-col items-center justify-center text-center py-6 md:py-0 ${m.highlight ? 'text-accent' : 'text-dark'}`}>
+            <div key={i} className={`metric-block flex flex-col items-center justify-center text-center py-6 md:py-0 ${m.highlight ? 'text-accent' : 'text-[#0F0F0E]'}`}>
               <div className="font-mono text-[clamp(3rem,6vw,5rem)] leading-none mb-2 tracking-tighter">
                 {m.value}
               </div>
@@ -94,13 +94,13 @@ const SocialProof = () => {
                 <div className="flex gap-1 mb-6">
                   {[1,2,3,4,5].map(star => <Star key={star} className="w-4 h-4 text-accent fill-accent" strokeWidth={1} />)}
                 </div>
-                <p className="font-sans text-dark/80 text-lg leading-[1.7] mb-8 italic">
+                <p className="font-sans text-[#0F0F0E]/80 text-lg leading-[1.7] mb-8 italic">
                   "{t.quote}"
                 </p>
               </div>
               <div className="mt-auto border-t border-border/10 pt-6">
-                <div className="font-sans font-medium text-dark">{t.name}</div>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-dark/50 mt-1">{t.role}</div>
+                <div className="font-sans font-medium text-[#0F0F0E]">{t.name}</div>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#0F0F0E]/50 mt-1">{t.role}</div>
               </div>
             </div>
           ))}
