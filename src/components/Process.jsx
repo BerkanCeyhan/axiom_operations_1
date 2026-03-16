@@ -135,11 +135,13 @@ const Process = () => {
                 }}
               >
                 {step.bgElem}
+                {/* Background Number as Watermark */}
+                <div className="absolute right-4 bottom-4 md:right-12 md:top-1/2 md:-translate-y-1/2 font-mono text-[8rem] md:text-[12rem] text-muted/[0.03] md:text-muted/5 font-medium leading-none select-none pointer-events-none z-0">
+                  {step.num}
+                </div>
+
                 <div className="relative z-10 p-8 md:p-16 flex flex-col justify-center w-full h-full">
-                  <div className="font-mono text-[6rem] md:text-[12rem] text-muted/5 font-medium leading-none absolute right-4 bottom-4 md:right-12 md:top-1/2 md:-translate-y-1/2 select-none pointer-events-none">
-                    {step.num}
-                  </div>
-                  <div className="max-w-2xl relative">
+                  <div className="max-w-2xl">
                     <span className="font-mono text-xs tracking-widest text-accent uppercase mb-4 block">Phase {step.num}</span>
                     <h3 className="font-sans font-light text-primary text-[clamp(1.75rem,4vw,3.5rem)] mb-6 tracking-[-0.04em] leading-tight">
                       {step.title}
