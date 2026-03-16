@@ -62,9 +62,9 @@ const Mechanism = () => {
         }}
       />
 
-      {/* Clinical Stillness: Vertical shimmer line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-accent/20 overflow-hidden">
-        <div className="absolute inset-0 w-full h-[30%] bg-gradient-to-b from-transparent via-accent to-transparent animate-[shimmer_6s_linear_infinite]" />
+      {/* Clinical Stillness: Vertical shimmer line - Hidden on Mobile */}
+      <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-accent/20 overflow-hidden">
+        <div className="absolute inset-0 w-full h-[30%] bg-gradient-to-b from-transparent via-accent to-transparent animate-shimmer" />
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
