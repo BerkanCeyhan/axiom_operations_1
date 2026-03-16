@@ -54,6 +54,19 @@
     @apply translate-x-0;
   }
 
+  .btn-hero {
+    @apply border border-accent bg-accent text-[#0F0F0E] relative overflow-hidden transition-all duration-500 ease-in-out px-10 py-5 font-mono text-sm uppercase tracking-widest rounded-none shadow-[0_0_20px_rgba(59,79,58,0.4)];
+  }
+  
+  .btn-hero::before {
+    content: '';
+    @apply absolute inset-0 bg-transparent translate-x-[-100%] transition-transform duration-500 ease-in-out z-[-1];
+  }
+  
+  .btn-hero:hover {
+    @apply bg-transparent text-accent;
+  }
+
   /* Preset E section padding scaling */
   .section-padding {
     @apply py-20 px-5 md:px-12 lg:py-32 lg:px-20;
