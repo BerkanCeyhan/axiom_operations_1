@@ -214,7 +214,7 @@ const Capabilities = ({ theme }) => {
   ];
 
   return (
-    <section id="capabilities" ref={containerRef} className="section-padding bg-dark relative border-t border-border">
+    <section id="capabilities" ref={containerRef} className="section-padding bg-dark relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-border pb-8">
           <div className="max-w-2xl">

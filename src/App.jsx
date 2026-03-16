@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen font-sans relative">
+    <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
       <Navbar theme={theme} />
       <Hero theme={theme} />
       <div id="content-start">

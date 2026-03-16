@@ -61,7 +61,7 @@ const SocialProof = () => {
   ];
 
   return (
-    <section id="proof" ref={containerRef} className="section-padding bg-[#E8E4DC] text-dark relative">
+    <section id="proof" ref={containerRef} className="section-padding bg-[#E8E4DC] text-dark relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
           <h2 className="font-sans font-light text-[clamp(2.5rem,5vw,3.5rem)] leading-tight tracking-[-0.04em] mb-4">

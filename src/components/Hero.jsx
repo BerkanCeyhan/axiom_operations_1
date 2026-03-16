@@ -41,7 +41,7 @@ const Hero = ({ theme }) => {
               <span className="hero-element font-sans font-light text-muted uppercase tracking-[0.2em] text-xs sm:text-sm md:text-base mb-2 md:mb-4">
                 Die Resilient Ops Architektur™
               </span>
-              <span className="hero-element font-drama italic text-primary leading-[0.9] text-[clamp(3.5rem,10vw,11rem)] -ml-1">
+              <span className="hero-element font-drama italic text-primary leading-[0.9] text-[clamp(3rem,10vw,11rem)]">
                 Ausfallsicher.
               </span>
             </h1>

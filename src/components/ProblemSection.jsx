@@ -24,7 +24,7 @@ const ProblemSection = () => {
   }, []);
 
   return (
-    <section id="problem" ref={containerRef} className="section-padding bg-dark relative">
+    <section id="problem" ref={containerRef} className="section-padding bg-dark relative overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mb-16 md:mb-24">
           <span className="font-mono text-accent uppercase text-xs tracking-[0.2em] block mb-4">

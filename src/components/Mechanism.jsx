@@ -104,7 +104,7 @@ const Mechanism = () => {
           {/* Flow Connector Structure */}
           <div className="relative w-full max-w-[400px] h-[300px] flex items-center justify-center z-10">
             {/* SVG Connecting Lines */}
-            <svg className="absolute inset-0 w-full h-full stroke-border z-0" overflow="visible">
+            <svg className="absolute inset-0 w-full h-full stroke-border z-0" viewBox="0 0 400 300">
               <path id="path-1" d="M 50,150 L 200,50" fill="none" strokeWidth="1" />
               <path id="path-2" d="M 50,150 L 200,250" fill="none" strokeWidth="1" />
               <path id="path-3" d="M 200,50 L 350,150" fill="none" strokeWidth="1" />
