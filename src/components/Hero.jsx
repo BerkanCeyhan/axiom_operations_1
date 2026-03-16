@@ -25,7 +25,7 @@ const Hero = ({ theme }) => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[100dvh] w-full flex flex-col justify-end pt-32 pb-10 md:pb-32 px-5 md:px-12 lg:px-20 overflow-hidden bg-dark"
+      className="relative min-h-[100dvh] w-full flex flex-col justify-center md:justify-center pt-32 pb-10 md:pb-32 px-5 md:px-12 lg:px-20 overflow-hidden bg-dark"
     >
       {/* WebGL Shader Background */}
       <ShaderCanvas theme={theme} />
@@ -33,10 +33,10 @@ const Hero = ({ theme }) => {
       {/* Heavy gradient overlay */}
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent pointer-events-none" />
 
-      {/* Content wrapper anchored to bottom-left */}
-      <div className="relative z-10 w-full max-w-5xl">
+      {/* Content wrapper shifted slightly to the right for 'left-center' alignment */}
+      <div className="relative z-10 w-full max-w-5xl md:ml-[8vw]">
         {/* Glass Content Panel */}
-        <div className="relative p-4 md:p-12 lg:p-16 backdrop-blur-md bg-white/[0.20] border border-white/5 max-w-4xl hero-element">
+        <div className="relative p-4 md:p-12 lg:p-16 rounded-md backdrop-blur-md bg-white/[0.20] border border-white/5 max-w-4xl hero-element">
           <div className="max-w-3xl">
             {/* Headline Block */}
             <div className="mb-8">
