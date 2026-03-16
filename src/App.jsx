@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 function App() {
   const [theme, setTheme] = useState('dark');
   const [isNavbarOverLight, setIsNavbarOverLight] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -28,23 +29,53 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // 1. Scroll Spy Logic
+    const sectionIds = ['problem', 'mechanism', 'capabilities', 'proof', 'process', 'faq', 'audit'];
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Trigger when section is in the top-ish part of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // 2. Navbar Background Contrast Logic (Adaptive Header)
     const handleScroll = () => {
       const proofSection = document.getElementById('proof');
       if (proofSection) {
         const rect = proofSection.getBoundingClientRect();
-        // Detect if Navbar (roughly 80px from top including margin) is within section boundaries
-        const isOver = rect.top <= 80 && rect.bottom >= 40;
+        // Navbar is fixed at top:6 (1.5rem / 24px)
+        // Detect if Navbar (approx 60-80px height) overlaps with light section
+        const isOver = rect.top <= 100 && rect.bottom >= 40;
         setIsNavbarOverLight(isOver);
+      } else {
+        setIsNavbarOverLight(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial check
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
     <div className="min-h-screen font-sans relative overflow-x-hidden w-full">
-      <Navbar theme={theme} isOverLight={isNavbarOverLight} />
+      <Navbar theme={theme} isOverLight={isNavbarOverLight} activeSection={activeSection} />
       <Hero theme={theme} />
       <div id="content-start">
         <ProblemSection theme={theme} />
