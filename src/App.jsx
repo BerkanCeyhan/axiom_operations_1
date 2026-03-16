@@ -16,6 +16,7 @@ const Footer = lazy(() => import('./components/Footer'));
 const Impressum = lazy(() => import('./pages/Impressum'));
 const Datenschutz = lazy(() => import('./pages/Datenschutz'));
 const Audit = lazy(() => import('./pages/Audit'));
+const AGB = lazy(() => import('./pages/AGB'));
 
 // Simple loading skeleton to prevent layout shift
 const SectionPlaceholder = () => <div className="min-h-[50vh] bg-dark" />;
@@ -110,6 +111,7 @@ function App() {
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/audit" element={<Audit />} />
+        <Route path="/agb" element={<AGB />} />
 
         {/* Catch-all 404 Page */}
         <Route path="*" element={<NotFound />} />

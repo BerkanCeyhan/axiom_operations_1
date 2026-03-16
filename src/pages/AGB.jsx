@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Impressum = () => {
+const AGB = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     // Dynamic SEO
-    document.title = 'Impressum | Axiom Operations';
+    document.title = 'AGB | Axiom Operations';
     
     // Add robots noindex
     let metaRobots = document.querySelector('meta[name="robots"]');
@@ -25,13 +25,13 @@ const Impressum = () => {
       document.head.appendChild(linkCanonical);
     }
     const originalCanonical = linkCanonical.href;
-    linkCanonical.href = 'https://axiom-operations.de/impressum';
+    linkCanonical.href = 'https://axiom-operations.de/agb';
 
     // Add description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       const originalDesc = metaDesc.content;
-      metaDesc.content = 'Impressum und rechtliche Angaben gemäß § 5 TMG für Axiom Operations, Berkan Ceyhan, Grevenbroich.';
+      metaDesc.content = 'Allgemeine Geschäftsbedingungen von Axiom Operations.';
       return () => {
         document.title = 'Axiom Operations – Fulfillment OS™ für Agenturen & Dienstleister';
         metaRobots.content = originalRobots;
@@ -62,95 +62,23 @@ const Impressum = () => {
             // Rechtliche Angaben
           </p>
           <h1 className="font-drama italic text-primary text-[clamp(3rem,8vw,6rem)] leading-[0.9] mb-8">
-            Impressum.
+            AGB.
           </h1>
           <p className="font-sans text-muted text-sm leading-[1.8] max-w-prose">
-            Angaben gemäß § 5 TMG
+            Allgemeine Geschäftsbedingungen von Axiom Operations.
           </p>
         </div>
 
-        {/* Content Sections */}
+        {/* Content Section Placeholder */}
         <div className="space-y-14">
-
-          {/* Anbieter */}
           <section>
             <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted mb-5">
-              01 — Anbieter
-            </h2>
-            <div className="font-sans text-primary/90 text-base leading-[1.9] space-y-1">
-              <p>Berkn Ceyhan</p>
-              <p>Kasterstraße 26</p>
-              <p>41517 Grevenbroich</p>
-            </div>
-          </section>
-
-          <div className="w-full h-px bg-border" />
-
-          {/* Kontakt */}
-          <section>
-            <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted mb-5">
-              02 — Kontakt
-            </h2>
-            <div className="font-sans text-primary/90 text-base leading-[1.9] space-y-2">
-              <p>
-                <span className="text-muted text-sm">Telefon: </span>
-                <a
-                  href="tel:+4917621411434"
-                  className="hover:text-accent transition-colors duration-200"
-                >
-                  +49 176 21411434
-                </a>
-              </p>
-              <p>
-                <span className="text-muted text-sm">E-Mail: </span>
-                <a
-                  href="mailto:berkan@berkanceyhan.de"
-                  className="hover:text-accent transition-colors duration-200"
-                >
-                  berkan@berkanceyhan.de
-                </a>
-              </p>
-            </div>
-          </section>
-
-          <div className="w-full h-px bg-border" />
-
-          {/* EU-Streitschlichtung */}
-          <section>
-            <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted mb-5">
-              03 — EU-Streitschlichtung
-            </h2>
-            <div className="font-sans text-primary/80 text-base leading-[1.9] space-y-4">
-              <p>
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-                <a
-                  href="https://ec.europa.eu/consumers/odr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:text-primary transition-colors duration-200 underline underline-offset-4 decoration-accent/30"
-                >
-                  https://ec.europa.eu/consumers/odr/
-                </a>
-              </p>
-              <p>
-                Unsere E-Mail-Adresse finden Sie oben im Impressum.
-              </p>
-            </div>
-          </section>
-
-          <div className="w-full h-px bg-border" />
-
-          {/* Verbraucherstreitbeilegung */}
-          <section>
-            <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted mb-5">
-              04 — Verbraucherstreitbeilegung
+              01 — Geltungsbereich
             </h2>
             <p className="font-sans text-primary/80 text-base leading-[1.9]">
-              Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-              Verbraucherschlichtungsstelle teilzunehmen.
+              Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen von Axiom Operations.
             </p>
           </section>
-
         </div>
 
         {/* Footer strip */}
@@ -170,4 +98,4 @@ const Impressum = () => {
   );
 };
 
-export default Impressum;
+export default AGB;

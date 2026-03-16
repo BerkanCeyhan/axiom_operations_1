@@ -15,7 +15,41 @@ const Section = ({ number, title, children }) => (
 const Datenschutz = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Datenschutz | Axiom Operations';
+    // Dynamic SEO
+    document.title = 'Datenschutzerklärung | Axiom Operations';
+    
+    // Add robots noindex
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta');
+      metaRobots.name = 'robots';
+      document.head.appendChild(metaRobots);
+    }
+    const originalRobots = metaRobots.content;
+    metaRobots.content = 'noindex, follow';
+
+    // Add canonical
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    if (!linkCanonical) {
+      linkCanonical = document.createElement('link');
+      linkCanonical.rel = 'canonical';
+      document.head.appendChild(linkCanonical);
+    }
+    const originalCanonical = linkCanonical.href;
+    linkCanonical.href = 'https://axiom-operations.de/datenschutz';
+
+    // Add description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      const originalDesc = metaDesc.content;
+      metaDesc.content = 'Datenschutzerklärung von Axiom Operations gemäß DSGVO. Minimale Datenerhebung, kein Tracking, keine Analyse-Tools.';
+      return () => {
+        document.title = 'Axiom Operations – Fulfillment OS™ für Agenturen & Dienstleister';
+        metaRobots.content = originalRobots;
+        linkCanonical.href = originalCanonical;
+        metaDesc.content = originalDesc;
+      };
+    }
   }, []);
 
   return (

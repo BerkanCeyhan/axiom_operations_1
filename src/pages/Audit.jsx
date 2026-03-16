@@ -6,7 +6,57 @@ const Audit = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Architektur-Audit anfragen | Axiom Operations';
+    // Dynamic SEO
+    document.title = 'Kostenlose Prozess-Analyse – 30 Minuten | Axiom Operations';
+    
+    // Add canonical
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    if (!linkCanonical) {
+      linkCanonical = document.createElement('link');
+      linkCanonical.rel = 'canonical';
+      document.head.appendChild(linkCanonical);
+    }
+    const originalCanonical = linkCanonical.href;
+    linkCanonical.href = 'https://axiom-operations.de/audit';
+
+    // Add description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    const originalDesc = metaDesc ? metaDesc.content : '';
+    if (metaDesc) {
+      metaDesc.content = '30 Minuten. Keine Verpflichtung. Wir analysieren deinen operativen Flaschenhals und zeigen dir 2–3 konkrete Hebel — kostenlos & unverbindlich. Für Agenturen mit 30k–150k MRR.';
+    } else {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      metaDesc.content = '30 Minuten. Keine Verpflichtung. Wir analysieren deinen operativen Flaschenhals und zeigen dir 2–3 konkrete Hebel — kostenlos & unverbindlich. Für Agenturen mit 30k–150k MRR.';
+      document.head.appendChild(metaDesc);
+    }
+      
+    // Add JSON-LD
+    const jsonLdScript = document.createElement('script');
+    jsonLdScript.type = 'application/ld+json';
+    jsonLdScript.innerHTML = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Kostenlose Prozess-Analyse",
+      "alternateName": "Architektur-Audit",
+      "provider": {
+        "@type": "Organization",
+        "name": "Axiom Operations",
+        "url": "https://axiom-operations.de"
+      },
+      "description": "30-minütiges kostenloses Erstgespräch: Ist-Analyse, Engpass-Diagnose und 2–3 konkrete Hebel für Agenturen mit 30k–150k MRR.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Kostenlos & unverbindlich"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Agenturen und Dienstleister mit 30.000–150.000 EUR Monatsumsatz"
+      }
+    });
+    document.head.appendChild(jsonLdScript);
 
     // Load Calendly widget script only once
     if (calendlyLoaded.current) return;
@@ -18,7 +68,11 @@ const Audit = () => {
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup script on unmount
+      // Cleanup
+      document.title = 'Axiom Operations – Fulfillment OS™ für Agenturen & Dienstleister';
+      linkCanonical.href = originalCanonical;
+      if (metaDesc) metaDesc.content = originalDesc;
+      document.head.removeChild(jsonLdScript);
       const existing = document.querySelector('script[src*="calendly"]');
       if (existing) existing.remove();
     };
