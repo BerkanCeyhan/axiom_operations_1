@@ -106,7 +106,7 @@ const SocialProof = () => {
               <div className="flex gap-1 mb-3">
                 {[1,2,3,4,5].map(star => <Star key={star} className="w-3.5 h-3.5 text-accent fill-accent" strokeWidth={1} />)}
               </div>
-              <div className="font-sans font-medium text-[#0F0F0E]">H&M Consulting</div>
+              <div className="font-sans font-medium text-[#0F0F0E]">M&H Consulting GmbH</div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-[#0F0F0E]/50 mt-1">Inhaber einer Performance-Agentur</div>
             </div>
           </div>
