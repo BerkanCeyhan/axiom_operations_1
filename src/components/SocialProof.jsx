@@ -87,8 +87,31 @@ const SocialProof = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="testimonials-container grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {testimonials.map((t, i) => (
+        <div className="testimonials-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-start">
+
+          {/* Video Testimonial — first card */}
+          <div className="testimony-card bg-[#F5F3EC] border border-border/10 rounded-lg overflow-hidden shadow-sm flex flex-col">
+            <div className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+              <iframe
+                src="https://www.youtube.com/embed/XS3R_RdVWt4?rel=0&modestbranding=1&playsinline=1"
+                title="Kundenstimme – Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                className="absolute inset-0 w-full h-full"
+                style={{ border: 'none' }}
+              />
+            </div>
+            <div className="border-t border-border/10 px-6 py-5">
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(star => <Star key={star} className="w-3.5 h-3.5 text-accent fill-accent" strokeWidth={1} />)}
+              </div>
+              <div className="font-sans font-medium text-[#0F0F0E]">H&M Consulting</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-[#0F0F0E]/50 mt-1">Inhaber einer Performance-Agentur</div>
+            </div>
+          </div>
+
+          {/* {testimonials.map((t, i) => (
             <div key={i} className="testimony-card bg-[#F5F3EC] border border-border/10 p-8 md:p-10 rounded-lg flex flex-col justify-between shadow-sm">
               <div>
                 <div className="flex gap-1 mb-6">
@@ -103,7 +126,7 @@ const SocialProof = () => {
                 <div className="font-mono text-[10px] uppercase tracking-widest text-[#0F0F0E]/50 mt-1">{t.role}</div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
