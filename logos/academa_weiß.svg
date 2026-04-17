@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 35">
+  <defs>
+    <style>
+      .cls-1{fill:#ffffff;}
+      .cls-2{fill:#ffffff; font-family:'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:20px; font-weight:600; letter-spacing:0.5px;}
+      .cls-3{fill:#ffffff; font-family:'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:12px; font-weight:400; opacity:0.8;}
+    </style>
+  </defs>
+  
+  <!-- Icon (scaled and positioned far left) -->
+  <g transform="scale(0.35) translate(-60, 5)">
+    <path class="cls-1" d="M116.98,41.42l17.25,9.96c1.27,.73,1.27,2.56,0,3.29l-17.25,9.96c-1.27,.73-2.85-.18-2.85-1.64v-19.92c0-1.46,1.58-2.38,2.85-1.64Z"/>
+    <g>
+      <path class="cls-1" d="M86.8,50.28h12.25c1.26-10.48,9.61-18.81,20.11-20.01v-12.24c-17.23,1.29-31.02,15.03-32.36,32.25Z"/>
+      <path class="cls-1" d="M119.16,11.89V0c-27.15,1.33-49,23.15-50.39,50.28h11.89c1.37-20.6,17.89-37.08,38.5-38.39Z"/>
+    </g>
+    <path class="cls-1" d="M124.66,18.04v12.26c11.85,1.49,20.91,12.03,20,24.46-.83,11.18-9.99,20.33-21.17,21.14-12.46,.9-23.01-8.23-24.44-20.12h-12.25c1.41,18.09,16.55,32.39,35,32.39,7.98,0,15.52-2.63,21.79-7.61l1.91-1.51v8.97h11.43V53.03c0-18.41-14.23-33.52-32.27-34.99Z"/>
+  </g>
+  
+  <!-- Academa Text (positioned left) -->
+  <text x="45" y="24" class="cls-2">academa</text>
+</svg>
